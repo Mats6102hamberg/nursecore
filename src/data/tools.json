@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ibd-observation-check",
+    "title": "IBD observations",
+    "category": "medicine",
+    "shortDescription": "Snabba punkter för daglig omvårdnadsöversikt.",
+    "content": "Fokusera på allmäntillstånd, buksmärta, avföringsmönster, aptit, vätskeintag/diures och patientens upplevda oro. Notera trendförändringar och dokumentera kort och tydligt."
+  },
+  {
+    "id": "liver-cirrhosis-focus",
+    "title": "Levercirros – omvårdnadsfokus",
+    "category": "medicine",
+    "shortDescription": "Strukturerad överblick för vardagsrond.",
+    "content": "Observera mentalt status, trötthet, bukomfång, perifera ödem, andning och nutrition. Uppmärksamma tecken på försämring utan att dra behandlingsslutsatser."
+  },
+  {
+    "id": "nutrition-hydration",
+    "title": "Vätska och nutrition",
+    "category": "medicine",
+    "shortDescription": "Påminnelse om basala omvårdnadsaspekter.",
+    "content": "Följ intag/utflöde, vikttrender, illamående och tolerans. Planera energi- och vätskeintag tillsammans med patienten enligt lokala rutiner."
+  },
+  {
+    "id": "icu-abcde",
+    "title": "ABCDE-repetition",
+    "category": "icu",
+    "shortDescription": "Snabb struktur för bedömning.",
+    "content": "Gå igenom Airway, Breathing, Circulation, Disability, Exposure och koppla observationer till möjliga orsaker. Fokusera på förändring över tid."
+  },
+  {
+    "id": "icu-sepsis-framework",
+    "title": "Sepsis-ramverk",
+    "category": "icu",
+    "shortDescription": "Konceptuell översikt för studiestöd.",
+    "content": "Sepsis handlar om infektion med organsvikt. Tänk på helhetsbilden, trend av vitalparametrar och tidiga försämringstecken."
+  },
+  {
+    "id": "icu-report-structure",
+    "title": "SBAR-rapport",
+    "category": "icu",
+    "shortDescription": "Kort mall för säker kommunikation.",
+    "content": "S: Vad är problemet? B: Kort bakgrund. A: Aktuella observationer. R: Vad behövs härnäst enligt PM."
+  }
+]
