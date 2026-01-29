@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/fd9d1056-9f91b5e418130764.js",
+      "static/chunks/117-6d3152f80147ba9e.js",
+      "static/chunks/main-app-2c5664d35cc9d67f.js",
+      "static/chunks/app/_not-found/page-4b9eb8aab41bf6df.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/fd9d1056-9f91b5e418130764.js",
+      "static/chunks/117-6d3152f80147ba9e.js",
+      "static/chunks/main-app-2c5664d35cc9d67f.js",
+      "static/chunks/app/layout-f427d6f60f2999b6.js"
+    ],
+    "/login/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/fd9d1056-9f91b5e418130764.js",
+      "static/chunks/117-6d3152f80147ba9e.js",
+      "static/chunks/main-app-2c5664d35cc9d67f.js",
+      "static/chunks/app/login/page-0909cea9ce7392f0.js"
+    ],
+    "/boris/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/fd9d1056-9f91b5e418130764.js",
+      "static/chunks/117-6d3152f80147ba9e.js",
+      "static/chunks/main-app-2c5664d35cc9d67f.js",
+      "static/chunks/app/boris/page-6b0e2068e3887ed0.js"
+    ],
+    "/notes/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/fd9d1056-9f91b5e418130764.js",
+      "static/chunks/117-6d3152f80147ba9e.js",
+      "static/chunks/main-app-2c5664d35cc9d67f.js",
+      "static/chunks/app/notes/page-bd7d1b561ed16595.js"
+    ],
+    "/knowledge/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/fd9d1056-9f91b5e418130764.js",
+      "static/chunks/117-6d3152f80147ba9e.js",
+      "static/chunks/main-app-2c5664d35cc9d67f.js",
+      "static/chunks/app/knowledge/page-bdafde545aca249f.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/fd9d1056-9f91b5e418130764.js",
+      "static/chunks/117-6d3152f80147ba9e.js",
+      "static/chunks/main-app-2c5664d35cc9d67f.js",
+      "static/chunks/app/page-9b4f6db889d5377f.js"
+    ],
+    "/tools/page": [
+      "static/chunks/webpack-100b9e646d9c912e.js",
+      "static/chunks/fd9d1056-9f91b5e418130764.js",
+      "static/chunks/117-6d3152f80147ba9e.js",
+      "static/chunks/main-app-2c5664d35cc9d67f.js",
+      "static/chunks/app/tools/page-1dd11cf819c6f352.js"
+    ]
+  }
+}
