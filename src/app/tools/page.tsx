@@ -131,63 +131,60 @@ export default function ToolsPage() {
   }
 
   return (
-    <div style={{ padding: "16px", maxWidth: "900px", margin: "0 auto" }}>
-      <h1>Tools</h1>
-      <nav style={{ marginBottom: "12px" }}>
-        <a href="/">Home</a> | <a href="/tools">Tools</a> |{" "}
-        <a href="/knowledge">Knowledge</a> | <a href="/notes">Notes</a> |{" "}
-        <a href="/boris">Boris</a>
-      </nav>
-      <div
-        style={{
-          position: "sticky",
-          top: 0,
-          background: "#ffffff",
-          padding: "12px 0",
-          borderBottom: "1px solid #e5e5e5",
-          zIndex: 1,
-        }}
-      >
-        <div>
-          <label
-            style={{ display: "inline-flex", alignItems: "center", gap: 8 }}
-          >
+    <div className="flex flex-col gap-6">
+      <div>
+        <h1 className="text-2xl font-semibold text-neutral-900 sm:text-3xl">
+          Tools
+        </h1>
+        <p className="mt-2 text-sm text-neutral-600 sm:text-base">
+          Practical, ward-focused support for daily structure and study.
+        </p>
+      </div>
+
+      <div className="sticky top-0 z-10 rounded-2xl border border-neutral-200 bg-white/90 p-4 shadow-sm backdrop-blur">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <label className="inline-flex items-center gap-2 text-sm font-medium text-neutral-700">
             <input
               type="checkbox"
               checked={favoritesOnly}
               onChange={(event) => setFavoritesOnly(event.target.checked)}
+              className="h-4 w-4 rounded border-neutral-300 text-neutral-900"
             />
             Show favorites only
           </label>
-        </div>
-        <div style={{ marginTop: 6 }}>
-          Favorites: {favorites.length} / Total: {tools.length}
+          <div className="text-sm text-neutral-500">
+            Favorites: {favorites.length} / Total: {tools.length}
+          </div>
         </div>
         {favoritesOnly && favorites.length === 0 ? (
-          <p style={{ marginTop: 8 }}>
+          <p className="mt-3 text-sm text-neutral-600">
             No favorites yet. Star a tool to add it here.
           </p>
         ) : null}
-        <section style={{ marginTop: 12 }}>
-          <h2 style={{ margin: "8px 0" }}>Recently used</h2>
+        <section className="mt-4 rounded-xl border border-neutral-200 bg-neutral-50 p-3">
+          <h2 className="text-sm font-semibold text-neutral-700">
+            Recently used
+          </h2>
           {recentTools.length === 0 ? (
-            <p>No recent tools yet.</p>
+            <p className="mt-2 text-sm text-neutral-600">
+              No recent tools yet.
+            </p>
           ) : (
-            <ul style={{ paddingLeft: 18, margin: 0 }}>
+            <ul className="mt-2 space-y-2">
               {recentTools.map((id) => {
                 const tool = (tools as Tool[]).find((item) => item.id === id);
                 if (!tool) return null;
                 return (
-                  <li key={id} style={{ marginBottom: 6 }}>
+                  <li key={id}>
                     <button
                       type="button"
                       onClick={() => openToolFromRecents(id)}
-                      style={{
-                        minHeight: 44,
-                        padding: "8px 12px",
-                      }}
+                      className="flex w-full items-center justify-between rounded-lg border border-neutral-200 bg-white px-3 py-2 text-left text-sm text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900"
                     >
-                      {tool.title} ({CATEGORY_LABELS[tool.category]})
+                      <span className="font-medium">{tool.title}</span>
+                      <span className="ml-3 rounded-full border border-neutral-200 px-2 py-0.5 text-xs text-neutral-500">
+                        {CATEGORY_LABELS[tool.category]}
+                      </span>
                     </button>
                   </li>
                 );
@@ -198,11 +195,16 @@ export default function ToolsPage() {
       </div>
 
       {groupedTools.map(([category, items]) => (
-        <section key={category} style={{ marginTop: "16px" }}>
-          <h2 style={{ margin: "16px 0 8px" }}>
-            {CATEGORY_LABELS[category]}
-          </h2>
-          <div>
+        <section key={category} className="space-y-3">
+          <div className="flex items-center gap-3 border-b border-neutral-200 pb-2">
+            <h2 className="text-lg font-semibold text-neutral-900">
+              {CATEGORY_LABELS[category]}
+            </h2>
+            <span className="rounded-full border border-neutral-200 bg-white px-2.5 py-0.5 text-xs font-medium uppercase tracking-wide text-neutral-500">
+              {category}
+            </span>
+          </div>
+          <div className="space-y-4">
             {items
               .filter((tool) => (favoritesOnly ? isFavorite(tool.id) : true))
               .sort((a, b) => {
@@ -217,21 +219,27 @@ export default function ToolsPage() {
                   <div
                     key={tool.id}
                     onClick={() => toggleTool(tool.id)}
-                    style={{
-                      border: "1px solid #e5e5e5",
-                      borderRadius: 6,
-                      padding: "12px",
-                      marginBottom: "12px",
-                    }}
+                    className="rounded-2xl border border-neutral-200 bg-white p-4 shadow-sm transition hover:shadow-md"
                   >
-                    <strong>{tool.title}</strong>
-                    <div style={{ marginTop: 4 }}>{tool.shortDescription}</div>
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <strong className="text-base font-semibold text-neutral-900">
+                          {tool.title}
+                        </strong>
+                        <div className="mt-1 text-sm text-neutral-600">
+                          {tool.shortDescription}
+                        </div>
+                      </div>
+                      <span className="rounded-full border border-neutral-200 bg-neutral-50 px-2 py-0.5 text-xs text-neutral-500">
+                        {CATEGORY_LABELS[tool.category]}
+                      </span>
+                    </div>
                     {isOpen ? (
-                      <p style={{ marginTop: 8, wordBreak: "break-word" }}>
+                      <p className="mt-3 text-sm text-neutral-700">
                         {tool.content}
                       </p>
                     ) : null}
-                    <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                    <div className="mt-4 flex flex-wrap gap-2">
                       <button
                         type="button"
                         onClick={(event) => {
@@ -239,7 +247,7 @@ export default function ToolsPage() {
                           toggleFavorite(tool.id);
                         }}
                         aria-pressed={isFavorite(tool.id)}
-                        style={{ minHeight: 44, padding: "8px 12px" }}
+                        className="min-h-[44px] rounded-full border border-neutral-200 bg-white px-4 text-sm font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900"
                       >
                         {isFavorite(tool.id) ? "★" : "☆"}
                       </button>
@@ -259,7 +267,7 @@ export default function ToolsPage() {
                             }));
                           }, 1500);
                         }}
-                        style={{ minHeight: 44, padding: "8px 12px" }}
+                        className="min-h-[44px] rounded-full border border-neutral-200 bg-white px-4 text-sm font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900"
                       >
                         {copied[tool.id] ? "Copied!" : "Copy"}
                       </button>
@@ -273,7 +281,7 @@ export default function ToolsPage() {
                             tool.id,
                           );
                         }}
-                        style={{ minHeight: 44, padding: "8px 12px" }}
+                        className="min-h-[44px] rounded-full bg-neutral-900 px-4 text-sm font-medium text-white shadow-sm transition hover:bg-neutral-800"
                       >
                         Send to Boris
                       </button>
