@@ -11,6 +11,23 @@ export default function BorisPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    const key = "nursecore_boris_prefill";
+    const modeKey = "nursecore_boris_prefill_mode";
+    const stored =
+      typeof window !== "undefined" ? localStorage.getItem(key) : null;
+    if (stored) {
+      setMessage(stored);
+      localStorage.removeItem(key);
+    }
+    const storedMode =
+      typeof window !== "undefined" ? localStorage.getItem(modeKey) : null;
+    if (storedMode === "medicine" || storedMode === "icu") {
+      setMode(storedMode);
+      localStorage.removeItem(modeKey);
+    }
+  }, []);
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
@@ -88,19 +105,3 @@ export default function BorisPage() {
     </div>
   );
 }
-  useEffect(() => {
-    const key = "nursecore_boris_prefill";
-    const modeKey = "nursecore_boris_prefill_mode";
-    const stored =
-      typeof window !== "undefined" ? localStorage.getItem(key) : null;
-    if (stored) {
-      setMessage(stored);
-      localStorage.removeItem(key);
-    }
-    const storedMode =
-      typeof window !== "undefined" ? localStorage.getItem(modeKey) : null;
-    if (storedMode === "medicine" || storedMode === "icu") {
-      setMode(storedMode);
-      localStorage.removeItem(modeKey);
-    }
-  }, []);
