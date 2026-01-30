@@ -45,6 +45,20 @@ export const translations = {
       labbTitle: "Lab Interpreter",
       labbDesc: "Enter lab values and get Boris to explain them.",
       labbLink: "Interpret labs →",
+      // FAQ
+      faqTitle: "How to get the most out of NurseCore",
+      faq1q: "What is NurseCore?",
+      faq1a: "NurseCore is your personal clinical toolkit – a calm, structured place for daily nursing work and study. Everything is gathered in one place: checklists, AI support with Boris, clinical calculators, and a knowledge bank.",
+      faq2q: "Who is Boris and how do I use him best?",
+      faq2a: "Boris is your AI study companion and work support. Two tips for getting the most out of Boris:\n\n• Be specific: \"Explain IBD flare for a new nurse\" gives better answers than \"Tell me about IBD\"\n• Use follow-up questions: Boris remembers the conversation, so you can dig deeper\n• Upload images: Boris can analyze wounds, rashes, and other clinical observations\n• Choose the right mode: Study mode for deep learning, Work mode for quick support during shifts",
+      faq3q: "What is the difference between Boris Study and Boris Work?",
+      faq3a: "Boris Study is for when you have time to learn properly – you get thorough explanations with background and context. Perfect for studying before exams or understanding complex topics.\n\nBoris Work is for quick support during your shift – concise answers with clear action steps. You can also set your shift (day/evening/night) so Boris adapts the advice.",
+      faq4q: "How do I use NEWS2, SBAR, and Lab interpreter?",
+      faq4a: "NEWS2: Click the parameter buttons to score each vital sign. The calculator automatically sums up and shows risk level with recommended actions.\n\nSBAR: Fill in the fields step by step. The preview updates live. Copy the finished report with one click.\n\nLab interpreter: Either click to add common labs and fill in values, or paste text directly from lab results. Boris explains what the values mean clinically.",
+      faq5q: "Is my data saved?",
+      faq5a: "Notes are saved locally in your browser. Conversations with Boris are not saved permanently – they disappear when you close the page. No patient data should ever be entered in the app.",
+      faq6q: "Can I use NurseCore for patient care?",
+      faq6a: "NurseCore is an educational and support tool. Boris never gives dosing advice or treatment decisions. Always follow local guidelines (PM) and consult with responsible physician for all clinical decisions. The app is a complement – not a replacement – for professional judgment.",
     },
 
     // Tools page
@@ -225,6 +239,20 @@ export const translations = {
       labbTitle: "Labb-tolkare",
       labbDesc: "Mata in labbvärden och låt Boris förklara dem.",
       labbLink: "Tolka labbvärden →",
+      // FAQ
+      faqTitle: "Så får du ut mest av NurseCore",
+      faq1q: "Vad är NurseCore?",
+      faq1a: "NurseCore är din personliga kliniska verktygslåda – en lugn, strukturerad plats för dagligt vårdarbete och studier. Allt samlat på ett ställe: checklistor, AI-stöd med Boris, kliniska kalkylatorer och kunskapsbank.",
+      faq2q: "Vem är Boris och hur använder jag honom bäst?",
+      faq2a: "Boris är din AI-studiekompis och jobbstöd. Tips för att få ut mest av Boris:\n\n• Var specifik: \"Förklara IBD-skov för en ny sjuksköterska\" ger bättre svar än \"Berätta om IBD\"\n• Ställ följdfrågor: Boris minns konversationen, så du kan gräva djupare\n• Ladda upp bilder: Boris kan analysera sår, utslag och andra kliniska observationer\n• Välj rätt läge: Studieläge för djupinlärning, Jobbläge för snabb hjälp under passet",
+      faq3q: "Vad är skillnaden mellan Boris Studie och Boris Jobb?",
+      faq3a: "Boris Studie är för när du har tid att lära dig ordentligt – du får utförliga förklaringar med bakgrund och sammanhang. Perfekt för plugg inför tenta eller för att förstå komplexa ämnen.\n\nBoris Jobb är för snabb hjälp under arbetspasset – koncisa svar med tydliga handlingssteg. Du kan även ställa in ditt arbetspass (dag/kväll/natt) så anpassar Boris råden.",
+      faq4q: "Hur använder jag NEWS2, SBAR och Labb-tolkaren?",
+      faq4a: "NEWS2: Klicka på parameterknapparna för att poängsätta varje vitalparameter. Kalkylatorn summerar automatiskt och visar risknivå med rekommenderade åtgärder.\n\nSBAR: Fyll i fälten steg för steg. Förhandsgranskningen uppdateras live. Kopiera färdig rapport med ett klick.\n\nLabb-tolkaren: Antingen klicka för att lägga till vanliga prover och fyll i värden, eller klistra in text direkt från labbsvar. Boris förklarar vad värdena betyder kliniskt.",
+      faq5q: "Sparas min data?",
+      faq5a: "Anteckningar sparas lokalt i din webbläsare. Konversationer med Boris sparas inte permanent – de försvinner när du stänger sidan. Ingen patientdata ska någonsin matas in i appen.",
+      faq6q: "Kan jag använda NurseCore i patientvården?",
+      faq6a: "NurseCore är ett utbildnings- och stödverktyg. Boris ger aldrig doseringsråd eller behandlingsbeslut. Följ alltid lokala PM och rådgör med ansvarig läkare för alla kliniska beslut. Appen är ett komplement – inte en ersättning – för professionellt omdöme.",
     },
 
     // Tools page
