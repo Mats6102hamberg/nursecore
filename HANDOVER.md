@@ -106,14 +106,162 @@ OPENAI_API_KEY=sk-...  # Required for Boris AI
 
 ---
 
-## Potential Next Steps
+## Future Features & Ideas
 
-- Add more clinical tools (drug calculators, fluid balance, etc.)
-- Expand knowledge bank with more topics
-- Add user authentication for persistent data
-- Offline support / PWA
-- More quick-select labs in Lab interpreter
-- Voice input for Boris
+### "Wow Effect" Features (High Impact)
+
+1. **Symtom-checker med Boris**
+   - Användaren beskriver symtom → Boris ger differentialdiagnoser
+   - Föreslår relevanta undersökningar och prover
+   - "Red flags" varningar för allvarliga tillstånd
+
+2. **Interaktiv fallbaserad inlärning**
+   - Boris presenterar patientfall steg för steg
+   - Användaren fattar beslut → får feedback
+   - Poängsystem och progression
+   - "Dagens fall" - nytt fall varje dag
+
+3. **Rapport-generator för hela passet**
+   - Samla flera SBAR, NEWS2, labbvärden
+   - Generera sammanfattande skiftrapport
+   - Exportera som PDF eller dela
+
+4. **Medicinskåps-scanner**
+   - Fotografera läkemedelsförpackning
+   - Boris identifierar och ger info om:
+     - Indikationer, kontraindikationer
+     - Vanliga biverkningar
+     - Omvårdnadsaspekter
+
+5. **EKG-tolkare**
+   - Ladda upp EKG-bild
+   - Boris analyserar rytm, intervall, avvikelser
+   - Pedagogisk förklaring av fynd
+
+6. **Röstassistent för Boris**
+   - Hands-free under arbetet
+   - "Hej Boris, vad är normalt CVP?"
+   - Text-to-speech för svar
+
+### Kliniska Verktyg (Medium Impact)
+
+7. **Vätskebalans-kalkylator**
+   - Input/output tracking
+   - Beräkna nettovätska
+   - Varning vid obalans
+
+8. **Infusionshastighet-räknare**
+   - Dos per kg, ml/h, droppar/min
+   - Spädningsberäkningar
+   - Vanliga protokoll (ex. Noradrenalin)
+
+9. **GCS-kalkylator (Glasgow Coma Scale)**
+   - Interaktiv poängsättning
+   - Tolkning och åtgärdsförslag
+
+10. **RASS/CAM-ICU för sedation**
+    - Sedering och delirium-screening
+    - Dokumentationshjälp
+
+11. **Smärtskattning multi-skala**
+    - VAS, NRS, Abbey (demens), FLACC (barn)
+    - Hjälp välja rätt skala
+
+12. **Nutritionsscreening (NRS-2002)**
+    - Steg-för-steg screening
+    - Åtgärdsförslag baserat på poäng
+
+13. **Fallriskbedömning (Downton)**
+    - Interaktiv checklista
+    - Förebyggande åtgärder
+
+14. **Trycksårsprevention (Norton/Braden)**
+    - Riskbedömning
+    - Lägesändringsschema
+
+### Kunskapsbank-expansion
+
+15. **Akuta tillstånd**
+    - Sepsis, anafylaxi, lungödem
+    - Steg-för-steg handläggning
+
+16. **Läkemedelskunskap**
+    - Vanliga vårdavdelningsläkemedel
+    - Omvårdnadsaspekter per läkemedel
+
+17. **Procedur-guider**
+    - KAD-sättning, PVK, sugning
+    - Steg-för-steg med bilder
+
+18. **Anatomi & fysiologi-repetition**
+    - Interaktiva illustrationer
+    - Koppling till kliniken
+
+### Användarupplevelse
+
+19. **Personlig dashboard**
+    - Favorit-verktyg snabbåtkomst
+    - Senaste Boris-konversationer
+    - Studiestatistik
+
+20. **Mörkt läge schema**
+    - Automatiskt nattläge baserat på klockslag
+    - Extra dämpad för nattpass
+
+21. **Offline-läge (PWA)**
+    - Verktyg fungerar utan internet
+    - Kunskapsbank cachad lokalt
+
+22. **Delning & export**
+    - Dela SBAR via SMS/mail
+    - Exportera beräkningar som bild
+
+### Gamification & Motivation
+
+23. **Daglig utmaning**
+    - En fråga per dag från Boris
+    - Streak-räknare för kontinuerligt lärande
+
+24. **Kunskapsquiz**
+    - Testa dig själv per ämne
+    - Spaced repetition för svåra frågor
+
+25. **Certifikat/badges**
+    - "Genomfört IBD-modulen"
+    - Delbart på LinkedIn
+
+### Integration & Samarbete
+
+26. **Team-funktioner**
+    - Dela checklistor inom teamet
+    - Gemensam kunskapsbank med egna tillägg
+
+27. **Kalender-integration**
+    - Påminnelser för studiepass
+    - Synka med arbetsschema
+
+28. **Anonymiserad statistik**
+    - Vilka verktyg används mest
+    - Vanligaste Boris-frågorna (för att förbättra)
+
+---
+
+## Recommended Priority Order
+
+**Snabba vinster (1-2 timmar vardera):**
+1. GCS-kalkylator (#9)
+2. Vätskebalans-kalkylator (#7)
+3. Smärtskattning multi-skala (#11)
+
+**Medium effort, high value (halv dag):**
+4. Interaktiv fallbaserad inlärning (#2)
+5. Symtom-checker med Boris (#1)
+6. Röstassistent (#6)
+
+**Större projekt (1+ dag):**
+7. EKG-tolkare (#5)
+8. Offline-läge PWA (#21)
+9. Medicinskåps-scanner (#4)
 
 ---
 
