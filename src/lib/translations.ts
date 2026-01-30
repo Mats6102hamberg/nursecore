@@ -18,9 +18,12 @@ export const translations = {
       toolsTitle: "Tools",
       toolsDesc: "Daily checklists and ward-focused aids.",
       toolsLink: "Open tools →",
-      borisTitle: "Boris AI",
-      borisDesc: "Study support with safe, structured guidance.",
-      borisLink: "Ask Boris →",
+      borisStudyTitle: "Boris Studie",
+      borisStudyDesc: "Study support for IBD, liver, and ICU.",
+      borisStudyLink: "Study with Boris →",
+      borisWorkTitle: "Boris Jobb",
+      borisWorkDesc: "Quick support during your shift.",
+      borisWorkLink: "Ask Boris →",
       notesTitle: "Notes",
       notesDesc: "Quick personal notes and reminders.",
       notesLink: "View notes →",
@@ -50,13 +53,18 @@ export const translations = {
     // Boris page
     boris: {
       title: "Boris AI",
+      studyTitle: "Boris Studie",
+      workTitle: "Boris Jobb",
       mode: "Mode",
       medicine: "Medicine",
       icu: "ICU",
+      work: "Work",
       message: "Message",
       placeholder: "Write your question here...",
-      disclaimer:
+      disclaimerStudy:
         "Educational support only. No patient-specific data, dosing, or medical decisions. Always refer to local PM and the responsible physician.",
+      disclaimerWork:
+        "Quick support during your shift. No dosing or treatment decisions. Always follow local PM and consult the responsible physician.",
       asking: "Asking...",
       askBoris: "Ask Boris",
       borisReplies: "Boris replies:",
@@ -111,9 +119,12 @@ export const translations = {
       toolsTitle: "Verktyg",
       toolsDesc: "Dagliga checklistor och avdelningsfokuserade hjälpmedel.",
       toolsLink: "Öppna verktyg →",
-      borisTitle: "Boris AI",
-      borisDesc: "Studiestöd med trygg, strukturerad vägledning.",
-      borisLink: "Fråga Boris →",
+      borisStudyTitle: "Boris Studie",
+      borisStudyDesc: "Studiestöd för IBD, lever och IVA.",
+      borisStudyLink: "Plugga med Boris →",
+      borisWorkTitle: "Boris Jobb",
+      borisWorkDesc: "Snabb hjälp under ditt arbetspass.",
+      borisWorkLink: "Fråga Boris →",
       notesTitle: "Anteckningar",
       notesDesc: "Snabba personliga anteckningar och påminnelser.",
       notesLink: "Visa anteckningar →",
@@ -143,13 +154,18 @@ export const translations = {
     // Boris page
     boris: {
       title: "Boris AI",
+      studyTitle: "Boris Studie",
+      workTitle: "Boris Jobb",
       mode: "Läge",
       medicine: "Medicin",
       icu: "IVA",
+      work: "Vardagsstöd",
       message: "Meddelande",
       placeholder: "Skriv din fråga här...",
-      disclaimer:
+      disclaimerStudy:
         "Endast utbildningsstöd. Ingen patientspecifik data, dosering eller medicinska beslut. Hänvisa alltid till lokala PM och ansvarig läkare.",
+      disclaimerWork:
+        "Snabb hjälp under arbetspasset. Ingen dosering eller behandlingsbeslut. Följ alltid lokala PM och rådgör med ansvarig läkare.",
       asking: "Frågar...",
       askBoris: "Fråga Boris",
       borisReplies: "Boris svarar:",

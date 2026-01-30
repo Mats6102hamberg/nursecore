@@ -21,7 +21,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <section className="grid gap-4 sm:grid-cols-2">
+      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <a
           href="/tools"
           className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
@@ -37,17 +37,35 @@ export default function HomePage() {
           </span>
         </a>
         <a
-          href="/boris"
+          href="/boris/studie"
           className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
         >
           <div>
             <h2 className="text-lg font-semibold text-neutral-900">
-              {t.home.borisTitle}
+              {t.home.borisStudyTitle}
             </h2>
-            <p className="mt-2 text-sm text-neutral-600">{t.home.borisDesc}</p>
+            <p className="mt-2 text-sm text-neutral-600">
+              {t.home.borisStudyDesc}
+            </p>
           </div>
           <span className="text-sm font-medium text-neutral-900">
-            {t.home.borisLink}
+            {t.home.borisStudyLink}
+          </span>
+        </a>
+        <a
+          href="/boris/jobb"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+        >
+          <div>
+            <h2 className="text-lg font-semibold text-neutral-900">
+              {t.home.borisWorkTitle}
+            </h2>
+            <p className="mt-2 text-sm text-neutral-600">
+              {t.home.borisWorkDesc}
+            </p>
+          </div>
+          <span className="text-sm font-medium text-neutral-900">
+            {t.home.borisWorkLink}
           </span>
         </a>
         <a
@@ -84,7 +102,7 @@ export default function HomePage() {
 
       <div className="fixed bottom-6 right-6 z-50">
         <a
-          href="/boris"
+          href="/boris/jobb"
           className="inline-flex items-center rounded-full bg-neutral-900 px-5 py-3 text-sm font-semibold text-white shadow-lg"
         >
           {t.home.borisCta}
