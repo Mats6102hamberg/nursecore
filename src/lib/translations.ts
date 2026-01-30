@@ -54,10 +54,12 @@ export const translations = {
       medicine: "Medicine",
       icu: "ICU",
       message: "Message",
+      placeholder: "Write your question here...",
       disclaimer:
         "Educational support only. No patient-specific data, dosing, or medical decisions. Always refer to local PM and the responsible physician.",
       asking: "Asking...",
       askBoris: "Ask Boris",
+      borisReplies: "Boris replies:",
     },
 
     // Knowledge page
@@ -137,10 +139,12 @@ export const translations = {
       medicine: "Medicin",
       icu: "IVA",
       message: "Meddelande",
+      placeholder: "Skriv din fråga här...",
       disclaimer:
         "Endast utbildningsstöd. Ingen patientspecifik data, dosering eller medicinska beslut. Hänvisa alltid till lokala PM och ansvarig läkare.",
       asking: "Frågar...",
       askBoris: "Fråga Boris",
+      borisReplies: "Boris svarar:",
     },
 
     // Knowledge page
