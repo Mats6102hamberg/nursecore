@@ -1,11 +1,11 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/login/page": "app/login/page.js",
-  "/boris/page": "app/boris/page.js",
-  "/notes/page": "app/notes/page.js",
-  "/knowledge/page": "app/knowledge/page.js",
   "/api/boris/route": "app/api/boris/route.js",
-  "/page": "app/page.js",
   "/api/login/route": "app/api/login/route.js",
-  "/tools/page": "app/tools/page.js"
+  "/boris/page": "app/boris/page.js",
+  "/knowledge/page": "app/knowledge/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/tools/page": "app/tools/page.js",
+  "/notes/page": "app/notes/page.js"
 }

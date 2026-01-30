@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from "../../lib/LanguageContext";
 
 type Mode = "medicine" | "icu";
 
 export default function BorisPage() {
+  const { t } = useLanguage();
   const [mode, setMode] = useState<Mode>("medicine");
   const [message, setMessage] = useState("");
   const [reply, setReply] = useState("");
@@ -54,10 +56,10 @@ export default function BorisPage() {
 
   return (
     <div>
-      <h1>Boris AI</h1>
+      <h1>{t.boris.title}</h1>
       <form onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Mode</legend>
+          <legend>{t.boris.mode}</legend>
           <label>
             <input
               type="radio"
@@ -66,7 +68,7 @@ export default function BorisPage() {
               checked={mode === "medicine"}
               onChange={() => setMode("medicine")}
             />
-            Medicine
+            {t.boris.medicine}
           </label>
           <label>
             <input
@@ -76,12 +78,12 @@ export default function BorisPage() {
               checked={mode === "icu"}
               onChange={() => setMode("icu")}
             />
-            ICU
+            {t.boris.icu}
           </label>
         </fieldset>
 
         <div>
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">{t.boris.message}</label>
           <textarea
             id="message"
             name="message"
@@ -91,12 +93,9 @@ export default function BorisPage() {
             required
           />
         </div>
-        <p>
-          Educational support only. No patient-specific data, dosing, or medical
-          decisions. Always refer to local PM and the responsible physician.
-        </p>
+        <p>{t.boris.disclaimer}</p>
         <button type="submit" disabled={loading}>
-          {loading ? "Asking..." : "Ask Boris"}
+          {loading ? t.boris.asking : t.boris.askBoris}
         </button>
       </form>
 

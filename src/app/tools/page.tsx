@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import tools from "../../data/tools.json";
+import { useLanguage } from "../../lib/LanguageContext";
 
 type Tool = {
   id: string;
@@ -9,11 +10,6 @@ type Tool = {
   category: "medicine" | "icu";
   shortDescription: string;
   content: string;
-};
-
-const CATEGORY_LABELS: Record<Tool["category"], string> = {
-  medicine: "Medicine",
-  icu: "ICU",
 };
 
 const PREFILL_KEY = "nursecore_boris_prefill";
@@ -31,12 +27,18 @@ function groupByCategory(items: Tool[]) {
 }
 
 export default function ToolsPage() {
+  const { t } = useLanguage();
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const [copied, setCopied] = useState<Record<string, boolean>>({});
   const [favorites, setFavorites] = useState<string[]>([]);
   const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [recentTools, setRecentTools] = useState<string[]>([]);
   const groupedTools = groupByCategory(tools as Tool[]);
+
+  const CATEGORY_LABELS: Record<Tool["category"], string> = {
+    medicine: t.tools.categoryMedicine,
+    icu: t.tools.categoryIcu,
+  };
 
   useEffect(() => {
     const stored =
@@ -134,10 +136,10 @@ export default function ToolsPage() {
     <div className="flex flex-col gap-6">
       <div>
         <h1 className="text-2xl font-semibold text-neutral-900 sm:text-3xl">
-          Tools
+          {t.tools.title}
         </h1>
         <p className="mt-2 text-sm text-neutral-600 sm:text-base">
-          Practical, ward-focused support for daily structure and study.
+          {t.tools.description}
         </p>
       </div>
 
@@ -150,25 +152,22 @@ export default function ToolsPage() {
               onChange={(event) => setFavoritesOnly(event.target.checked)}
               className="h-4 w-4 rounded border-neutral-300 text-neutral-900"
             />
-            Show favorites only
+            {t.tools.showFavoritesOnly}
           </label>
           <div className="text-sm text-neutral-500">
-            Favorites: {favorites.length} / Total: {tools.length}
+            {t.tools.favorites}: {favorites.length} / {t.tools.total}:{" "}
+            {tools.length}
           </div>
         </div>
         {favoritesOnly && favorites.length === 0 ? (
-          <p className="mt-3 text-sm text-neutral-600">
-            No favorites yet. Star a tool to add it here.
-          </p>
+          <p className="mt-3 text-sm text-neutral-600">{t.tools.noFavorites}</p>
         ) : null}
         <section className="mt-4 rounded-xl border border-neutral-200 bg-neutral-50 p-3">
           <h2 className="text-sm font-semibold text-neutral-700">
-            Recently used
+            {t.tools.recentlyUsed}
           </h2>
           {recentTools.length === 0 ? (
-            <p className="mt-2 text-sm text-neutral-600">
-              No recent tools yet.
-            </p>
+            <p className="mt-2 text-sm text-neutral-600">{t.tools.noRecent}</p>
           ) : (
             <ul className="mt-2 space-y-2">
               {recentTools.map((id) => {
@@ -269,7 +268,7 @@ export default function ToolsPage() {
                         }}
                         className="min-h-[44px] rounded-full border border-neutral-200 bg-white px-4 text-sm font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900"
                       >
-                        {copied[tool.id] ? "Copied!" : "Copy"}
+                        {copied[tool.id] ? t.tools.copied : t.tools.copy}
                       </button>
                       <button
                         type="button"
@@ -283,7 +282,7 @@ export default function ToolsPage() {
                         }}
                         className="min-h-[44px] rounded-full bg-neutral-900 px-4 text-sm font-medium text-white shadow-sm transition hover:bg-neutral-800"
                       >
-                        Send to Boris
+                        {t.tools.sendToBoris}
                       </button>
                     </div>
                   </div>
