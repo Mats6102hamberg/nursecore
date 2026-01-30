@@ -40,5 +40,68 @@
     "category": "icu",
     "shortDescription": "Kort mall för säker kommunikation.",
     "content": "S: Vad är problemet? B: Kort bakgrund. A: Aktuella observationer. R: Vad behövs härnäst enligt PM."
+  },
+  {
+    "id": "knee-pain-assessment",
+    "title": "Knäsmärta – bedömning",
+    "category": "ortho",
+    "shortDescription": "Systematisk bedömning av knäsmärta.",
+    "content": "FRÅGOR ATT STÄLLA:\n• Lokalisation: Var gör det ont? (Framför, bakom, medialt, lateralt, diffust)\n• Debut: Akut skada eller smygande debut?\n• Karaktär: Molande, skarp, låsningar, instabilitet?\n• Förvärrar: Trappor, huksittande, vila, belastning?\n• Lindrar: Vila, is, värme, rörelse?\n• Svullnad: När kom den? Direkt (blod) eller efter timmar (vätska)?\n• Låsningar/upphakning: Meniskmisstanke\n• Viker sig knät? Ligamentinstabilitet\n\nOBSERVERA:\n• Hälta, gångmönster\n• Svullnad, rodnad, värmeökning\n• Muskelatrofi (quadriceps)\n• Felställning (varus/valgus)"
+  },
+  {
+    "id": "knee-examination",
+    "title": "Knäundersökning – checklista",
+    "category": "ortho",
+    "shortDescription": "Strukturerad klinisk undersökning av knät.",
+    "content": "INSPEKTION:\n• Svullnad (intraartikulär vs periartikulär)\n• Rodnad, blåmärken\n• Muskelatrofi\n• Felställning\n\nPALPATION:\n• Ledspringa (medialt/lateralt)\n• Patella och patellarsenan\n• Kollateralligament\n• Knäveck (Baker-cysta?)\n• Värmeökning jämfört med friska sidan\n\nRÖRLIGHET:\n• Flexion (normalt ~135°)\n• Extension (normalt 0°, hyperextension -5-10°)\n• Smärta vid rörelse? Ändlägessmärta?\n\nSTABILITETSTEST:\n• Sidostabilitet (varus/valgus-stress)\n• Främre draglåda (ACL)\n• Bakre draglåda (PCL)\n• Lachman test (ACL – känsligast)\n\nSPECIALTEST:\n• McMurray (menisk)\n• Appley's compression (menisk)\n• Patellar apprehension (luxation)"
+  },
+  {
+    "id": "knee-conditions",
+    "title": "Vanliga knätillstånd",
+    "category": "ortho",
+    "shortDescription": "Översikt av vanliga knädiagnoser.",
+    "content": "ARTROS:\n• Smygande debut, morgonstelhet <30 min\n• Belastningssmärta, bättre av vila\n• Krepitationer, nedsatt rörlighet\n• Röntgen: Ledspringesänkning, osteofyter\n\nMENISKSKADA:\n• Ofta vridvåld\n• Låsningar, upphakningar\n• Smärta vid huksittande och rotation\n• Svullnad kommer efter timmar\n\nKORSBANDSSKADA (ACL):\n• Akut trauma, ofta \"pop\"-ljud\n• Snabb svullnad (hemartros)\n• Instabilitetskänsla\n• Positiv Lachman\n\nKOLLATERALBANDSSKADA:\n• Valgus/varus-våld\n• Lokal smärta och svullnad\n• Instabilitet vid sidopress\n\nPATELLAR TENDINIT (Hopparknä):\n• Smärta under patella\n• Värre vid hopp, trappor\n• Vanligt hos idrottare\n\nBURSIT:\n• Lokal svullnad (prepatellär vanligast)\n• \"Hemmafruknä\" – knästående arbete\n• Värme, ev rodnad\n\nBAKER-CYSTA:\n• Svullnad i knävecket\n• Spänningskänsla vid böjning\n• Sekundär till annan knäpatologi"
+  },
+  {
+    "id": "knee-postop-tka",
+    "title": "Postop knäprotes (TKA)",
+    "category": "ortho",
+    "shortDescription": "Omvårdnad efter total knäplastik.",
+    "content": "DAG 0-1:\n• Smärtlindring prioritet – ofta EDA, nervblockad, multimodal\n• Kryoterapi (ismaskin/ispack)\n• Högläge vid vila\n• Mobilisering samma dag eller dag 1 enligt PM\n• Antikoagulantia (trombosprofylax)\n• Kontrollera distal cirkulation, känsel, motorik\n\nOBSERVERA:\n• Blödning i förband/drän\n• Svullnad (viss normalt)\n• Smärtnivå och effekt av analgetika\n• Temperatur (infektion?)\n• Vadstatus (DVT?)\n\nMOBILISERING:\n• Upp ur säng med hjälp dag 0-1\n• Gånghjälpmedel (rollator → kryckor)\n• Rörelseträning – mål: 90° flexion vid utskrivning\n• Trappträning före hemgång\n\nUTSKRIVNINGSKRITERIER:\n• Adekvat smärtkontroll med tabletter\n• Kan gå med hjälpmedel\n• Kan klara ADL / har hjälp hemma\n• Förstår trombosprofylax och varningssignaler"
+  },
+  {
+    "id": "knee-postop-arthroscopy",
+    "title": "Postop artroskopi",
+    "category": "ortho",
+    "shortDescription": "Omvårdnad efter knäartroskopi.",
+    "content": "DIREKT POSTOPERATIVT:\n• Ofta dagkirurgi\n• Lindrig smärta – paracetamol + NSAID oftast tillräckligt\n• Kyla och högläge\n• Kompressionsförband\n\nMOBILISERING:\n• Full belastning oftast tillåten (beroende på ingrepp)\n• Menisksutur: Begränsad belastning 4-6 veckor\n• ACL-rekonstruktion: Ortos, begränsningar enligt PM\n\nSÅRVÅRD:\n• Små stickhål – tegaderm eller liknande\n• Duscha OK efter 24-48h oftast\n• Undvik badkar/bassäng 2 veckor\n\nVARNINGSTECKEN (kontakta vården):\n• Feber >38.5°\n• Tilltagande svullnad och smärta\n• Rodnad, värme, sekretion från sår\n• Vadsmärta (DVT-misstanke)\n• Domningar som inte går över"
+  },
+  {
+    "id": "knee-acl-rehab",
+    "title": "ACL-rehab – faser",
+    "category": "ortho",
+    "shortDescription": "Rehabiliteringsfaser efter korsbandsskada.",
+    "content": "FAS 1 (Vecka 0-2):\n• Mål: Minska svullnad, återfå extension\n• RICE (Rest, Ice, Compression, Elevation)\n• Quadricepsaktivering (isometriskt)\n• Passiv/aktiv extension\n• Gång med kryckor, partiell belastning\n\nFAS 2 (Vecka 2-6):\n• Mål: Full ROM, normal gång\n• Gradvis ökad belastning\n• Styrketräning (slutna kedjor)\n• Proprioceptionträning påbörjas\n• Cykling (lågt motstånd)\n\nFAS 3 (Vecka 6-12):\n• Mål: Styrka och stabilitet\n• Progressiv styrketräning\n• Balans och koordination\n• Löpning på plan mark (om läkare godkänner)\n\nFAS 4 (Månad 3-6):\n• Mål: Idrottsspecifik träning\n• Hopp och landningsträning\n• Riktningsförändringar\n• Sport-specifika övningar\n\nFAS 5 (Månad 6-12):\n• Mål: Return to sport\n• Funktionella tester\n• Psykologisk beredskap\n• Gradvis återgång till full aktivitet\n\nVIKTIGT: Individuell progression, inte tidsbaserad!"
+  },
+  {
+    "id": "knee-mobility-exercises",
+    "title": "Knärörlighet – övningar",
+    "category": "ortho",
+    "shortDescription": "Enkla rörelseövningar för knät.",
+    "content": "FÖR ÖKAD FLEXION:\n• Hälglidning: Ligg på rygg, dra hälen mot rumpan genom att glida mot underlaget\n• Sittande flexion: Sitt på stol, låt foten glida bakåt under stolen\n• Prone hangs: Ligg på mage med knät utanför sängkanten\n\nFÖR ÖKAD EXTENSION:\n• Prop under häl: Ligg med hälen på kudde, låt knät sträckas av tyngdkraften\n• Aktiv sträckning: Spänn quadriceps, tryck knät mot underlaget\n• Prone extension: Ligg på mage med vikter på vristen\n\nSTYRKEÖVNINGAR:\n• Quadriceps-sets: Isometrisk spänning, håll 5-10 sek\n• Rakt benlyft: Spänn lår, lyft benet rakt 10-15 cm\n• Mini-squats: Grund knäböj med stöd\n• Step-ups: Låg pall, steg upp/ner\n• Bensträck: Med eller utan motstånd\n\nTIPS:\n• Värm upp före (promenad eller cykling)\n• Smärta ska inte vara över 4/10\n• Konsistens viktigare än intensitet\n• Is efteråt vid svullnad"
+  },
+  {
+    "id": "knee-pain-management",
+    "title": "Knäsmärta – lindring",
+    "category": "ortho",
+    "shortDescription": "Smärtlindring och egenvård vid knäbesvär.",
+    "content": "ICKE-FARMAKOLOGISKT:\n• Kyla: 15-20 min, flera ggr/dag vid akut smärta/svullnad\n• Värme: Vid kronisk smärta, stelhet (ej vid inflammation)\n• Kompression: Elastisk linda eller knäskydd\n• Högläge: Minskar svullnad\n• Vila: Undvik provocerande aktivitet\n• Avlastning: Gånghjälpmedel vid behov\n\nFARMAKOLOGISKT:\n• Paracetamol: Förstahand, 1g x 4\n• NSAID: Ibuprofen/naproxen, kort period\n  - OBS: Kontraindikationer (mage, njure, hjärta)\n• Topikala NSAID: Gel, färre systembiverkningar\n• Opioder: Undvik vid kronisk smärta\n\nHJÄLPMEDEL:\n• Knäortos/bandage: Stabilitet och proprioception\n• Inlägg: Vid felställning\n• Gånghjälpmedel: Avlastning\n\nLIVSSTILSFAKTORER:\n• Viktminskning: 1 kg mindre = 4 kg mindre belastning på knät\n• Motion: Låg-impact (simning, cykling, promenader)\n• Undvik: Huksittande, knästående, tunga lyft\n\nNÄR SÖKA VÅRD:\n• Akut svullnad och smärta efter trauma\n• Låsningar i knät\n• Instabilitet (knät viker sig)\n• Feber + knäsvullnad (infektionsmisstanke)\n• Ingen förbättring efter 2 veckor egenvård"
+  },
+  {
+    "id": "knee-red-flags",
+    "title": "Knä – varningsflaggor",
+    "category": "ortho",
+    "shortDescription": "Allvarliga tecken som kräver snabb åtgärd.",
+    "content": "SÖKA AKUT:\n\n🚨 SEPTISK ARTRIT:\n• Snabbt insättande smärta, svullnad\n• Värmeökning, rodnad\n• Feber, allmänpåverkan\n• Kan inte belasta/röra\n• Risk: Tidigare infektion, immunsuppression, protes\n→ AKUT LEDPUNKTION! Antibiotika efter odling.\n\n🚨 TRAUMA MED HEMARTROS:\n• Snabb svullnad (<2h) efter trauma\n• Indikerar blödning i leden\n• Misstanke: ACL-ruptur, fraktur, patellaluxation\n→ Röntgen, ev MR, ortopedkonsult\n\n🚨 AKUT KÄRLPÅVERKAN:\n• Kall, blek fot\n• Nedsatt/utsläckt puls\n• Svår smärta\n• Risk vid knäluxation\n→ KÄRLKIRURGJOUR!\n\n🚨 KOMPARTMENTSYNDROM:\n• Svår smärta, värre vid passiv stretch\n• Spänd muskulatur\n• Parestesier\n• Risk efter trauma, operation, gips\n→ Akut tryckmätning, ev fasciotomi\n\n🚨 DJUP VENTROMBOS (DVT):\n• Vadsvullnad, värme\n• Smärta i vaden\n• Risk efter kirurgi, immobilisering\n→ D-dimer, ultraljud"
   }
 ]

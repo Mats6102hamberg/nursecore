@@ -48,6 +48,7 @@ export const translations = {
       sendToBoris: "Send to Boris",
       categoryMedicine: "Medicine",
       categoryIcu: "ICU",
+      categoryOrtho: "Orthopedics",
     },
 
     // Boris page
@@ -150,6 +151,7 @@ export const translations = {
       sendToBoris: "Skicka till Boris",
       categoryMedicine: "Medicin",
       categoryIcu: "IVA",
+      categoryOrtho: "Ortopedi",
     },
 
     // Boris page

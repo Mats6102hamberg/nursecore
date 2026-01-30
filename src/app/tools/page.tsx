@@ -7,7 +7,7 @@ import { useLanguage } from "../../lib/LanguageContext";
 type Tool = {
   id: string;
   title: string;
-  category: "medicine" | "icu";
+  category: "medicine" | "icu" | "ortho";
   shortDescription: string;
   content: string;
 };
@@ -38,6 +38,7 @@ export default function ToolsPage() {
   const CATEGORY_LABELS: Record<Tool["category"], string> = {
     medicine: t.tools.categoryMedicine,
     icu: t.tools.categoryIcu,
+    ortho: t.tools.categoryOrtho,
   };
 
   useEffect(() => {
