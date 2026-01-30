@@ -48,7 +48,7 @@ export function Header() {
             className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-sm font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900"
             aria-label="Toggle language"
           >
-            {language === "en" ? "🇸🇪 SV" : "🇬🇧 EN"}
+            {language === "sv" ? "🇸🇪 SV" : "🇬🇧 EN"}
           </button>
         </div>
       </div>
