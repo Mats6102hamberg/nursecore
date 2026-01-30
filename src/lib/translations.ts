@@ -103,6 +103,8 @@ export const translations = {
       ibd: "IBD",
       liver: "Liver",
       icu: "ICU",
+      showAll: "Show all",
+      hideAll: "Hide all",
     },
 
     // Notes page
@@ -266,6 +268,8 @@ export const translations = {
       ibd: "IBD",
       liver: "Lever",
       icu: "IVA",
+      showAll: "Visa alla",
+      hideAll: "Dölj alla",
     },
 
     // Notes page
