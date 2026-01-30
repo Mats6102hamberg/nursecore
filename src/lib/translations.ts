@@ -78,6 +78,11 @@ export const translations = {
       thinking: "Thinking...",
       quickSuggestions: "Suggestions to start with:",
       quickQuestionsWork: "Quick questions:",
+      shift: "Shift",
+      shiftDay: "Day",
+      shiftEvening: "Evening",
+      shiftNight: "Night",
+      shiftNone: "Not set",
       // Quick questions - Medicine
       qMed1: "Explain IBD flare as if I'm new",
       qMed2: "What to watch for in hepatic encephalopathy?",
@@ -243,6 +248,11 @@ export const translations = {
       thinking: "Tänker...",
       quickSuggestions: "Förslag att börja med:",
       quickQuestionsWork: "Snabba frågor:",
+      shift: "Arbetspass",
+      shiftDay: "Dag",
+      shiftEvening: "Kväll",
+      shiftNight: "Natt",
+      shiftNone: "Ej valt",
       // Quick questions - Medicine
       qMed1: "Förklara IBD-skov som om jag är ny",
       qMed2: "Vad ska jag tänka på vid leverencefalopati?",

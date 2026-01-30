@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 import { useLanguage } from "../../../lib/LanguageContext";
 
 type Message = {
@@ -8,12 +9,14 @@ type Message = {
   content: string;
 };
 
+type Shift = "day" | "evening" | "night" | null;
 
 export default function BorisJobbPage() {
   const { t } = useLanguage();
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(false);
+  const [shift, setShift] = useState<Shift>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,7 +36,7 @@ export default function BorisJobbPage() {
       const response = await fetch("/api/boris", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage, mode: "work", history: messages }),
+        body: JSON.stringify({ message: userMessage, mode: "work", history: messages, shift }),
       });
       const data = await response.json();
       if (!response.ok) {
@@ -61,6 +64,13 @@ export default function BorisJobbPage() {
     setMessages([]);
   }
 
+  const shiftOptions: { value: Shift; label: string }[] = [
+    { value: null, label: t.boris.shiftNone },
+    { value: "day", label: t.boris.shiftDay },
+    { value: "evening", label: t.boris.shiftEvening },
+    { value: "night", label: t.boris.shiftNight },
+  ];
+
   return (
     <div className="flex flex-col gap-6">
       <div>
@@ -70,8 +80,28 @@ export default function BorisJobbPage() {
         <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{t.boris.disclaimerWork}</p>
       </div>
 
-      {messages.length > 0 && (
-        <div className="flex justify-end">
+      {/* Shift selector */}
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-neutral-600 dark:text-neutral-400">{t.boris.shift}:</span>
+          <div className="flex gap-1">
+            {shiftOptions.map((option) => (
+              <button
+                key={option.value ?? "none"}
+                type="button"
+                onClick={() => setShift(option.value)}
+                className={`rounded-full px-3 py-1 text-sm transition ${
+                  shift === option.value
+                    ? "bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900"
+                    : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700"
+                }`}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        </div>
+        {messages.length > 0 && (
           <button
             type="button"
             onClick={clearChat}
@@ -79,8 +109,8 @@ export default function BorisJobbPage() {
           >
             {t.boris.clearChat}
           </button>
-        </div>
-      )}
+        )}
+      </div>
 
       {messages.length === 0 && (
         <div className="flex flex-col gap-3">
@@ -121,7 +151,13 @@ export default function BorisJobbPage() {
                     : "bg-white text-neutral-700 shadow-sm border border-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:border-neutral-700"
                 }`}
               >
-                <div className="whitespace-pre-wrap">{msg.content}</div>
+                {msg.role === "boris" ? (
+                  <div className="prose prose-sm prose-neutral dark:prose-invert max-w-none prose-p:my-2 prose-ul:my-2 prose-ol:my-2 prose-li:my-0.5 prose-headings:mt-3 prose-headings:mb-2 prose-a:text-blue-600 dark:prose-a:text-blue-400">
+                    <ReactMarkdown>{msg.content}</ReactMarkdown>
+                  </div>
+                ) : (
+                  <div className="whitespace-pre-wrap">{msg.content}</div>
+                )}
               </div>
             </div>
           ))}
