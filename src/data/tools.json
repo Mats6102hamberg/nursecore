@@ -21,6 +21,76 @@
     "content": "Följ intag/utflöde, vikttrender, illamående och tolerans. Planera energi- och vätskeintag tillsammans med patienten enligt lokala rutiner."
   },
   {
+    "id": "hypoglycemia",
+    "title": "Hypoglykemi – åtgärd",
+    "category": "medicine",
+    "shortDescription": "Snabb handläggning vid lågt blodsocker.",
+    "content": "SYMTOM:\n• Tidiga: Svettning, darrning, hunger, hjärtklappning, oro\n• Sena: Förvirring, synstörning, kramper, medvetslöshet\n\nÅTGÄRD VID P-GLUKOS <4 mmol/L:\n\nVAKEN PATIENT:\n• Ge 15-20g snabba kolhydrater:\n  - 4 druvsockertabletter\n  - 1.5 dl juice/läsk (ej light)\n  - 1 msk honung/socker\n• Kontrollera P-glukos efter 15 min\n• Upprepa om fortfarande <4\n• När >4: Ge långsamma kolhydrater (smörgås)\n\nMEDVETSLÖS/KAN EJ SVÄLJA:\n• Larma!\n• Ge Glukos 300mg/ml iv (30-50ml) eller\n• Glukagon 1mg im/sc\n• Stabilt sidoläge\n• Kontrollera P-glukos var 15:e min\n\nDOKUMENTERA: Tid, symtom, P-glukos, åtgärd, effekt"
+  },
+  {
+    "id": "blood-transfusion",
+    "title": "Blodtransfusion – checklista",
+    "category": "medicine",
+    "shortDescription": "Säker hantering av blodprodukter.",
+    "content": "FÖRE TRANSFUSION:\n□ Kontrollera ordination och indikation\n□ Informera patienten\n□ Bastest/BAS-test giltig?\n□ ID-kontroll: Patient + blodpåse (2 personer)\n□ Kontrollera: Blodenhet, utgångsdatum, utseende\n□ Baseline vitalparametrar\n□ Säkerställ fungerande PVK/CVK\n\nUNDER TRANSFUSION:\n□ Starta långsamt första 15 min\n□ Stanna hos patienten första 15 min\n□ Kontrollera vitalparametrar:\n  - Start, efter 15 min, efter avslut\n□ Observera transfusionsreaktion:\n  • Feber, frossa\n  • Klåda, urtikaria\n  • Andnöd\n  • Bröstsmärta, ryggsmärta\n  • Hypotension\n\nVID REAKTION:\n1. STOPPA transfusionen!\n2. Håll infarten öppen med NaCl\n3. Larma läkare\n4. Kontrollera vitalparametrar\n5. Spara blodpåsen\n\nEFTER:\n□ Dokumentera mängd, tid, reaktioner\n□ Kassera påse enligt rutin"
+  },
+  {
+    "id": "pain-assessment",
+    "title": "Smärtskattning",
+    "category": "medicine",
+    "shortDescription": "Systematisk smärtbedömning.",
+    "content": "SKALOR:\n• VAS/NRS (0-10): Patienten skattar själv\n  0 = ingen smärta, 10 = värsta tänkbara\n• Abbey Pain Scale: Vid demens/kommunikationssvårigheter\n• FLACC: Barn 2 mån - 7 år\n\nFRÅGOR ATT STÄLLA:\n• Lokalisation: Var gör det ont? Rita!\n• Karaktär: Molande, stickande, brännande, pulserande?\n• Intensitet: 0-10?\n• Duration: Konstant eller intermittent?\n• Vad förvärrar? Rörelse, vila, viss position?\n• Vad lindrar? Vila, värme, kyla, läkemedel?\n• Utstrålning: Strålar smärtan ut?\n• Påverkan: Sömn, humör, aktivitet, aptit?\n\nDOKUMENTERA:\n• Smärtskattning före och efter åtgärd\n• Typ av åtgärd (läkemedel, dos, tid)\n• Effekt av åtgärd\n• Biverkningar\n\nMÅL: Smärta ≤3 i vila, ≤5 vid aktivitet"
+  },
+  {
+    "id": "fall-prevention",
+    "title": "Fallriskbedömning",
+    "category": "medicine",
+    "shortDescription": "Identifiera och förebygg fall.",
+    "content": "RISKFAKTORER:\n• Tidigare fall\n• Gång/balanssvårigheter\n• Synnedsättning\n• Kognitiv svikt/förvirring\n• Läkemedel (sedativa, diuretika, opioder)\n• Ortostatism\n• Inkontinens (brådska till toalett)\n• Undernäring\n• Miljöfaktorer\n\nBEDÖMNINGSINSTRUMENT:\n• Downton Fall Risk Index\n• DFRI (Downton)\n\nFÖREBYGGANDE ÅTGÄRDER:\n□ Anpassad sänghöjd\n□ Sänggrind vid behov\n□ Ringklocka inom räckhåll\n□ Belysning – nattlampa\n□ Gånghjälpmedel tillgängligt\n□ Halkfria skor/strumpor\n□ Avlägsna hinder\n□ Glasögon/hörapparat\n□ Toalettrutiner\n□ Läkemedelsgenomgång\n\nVID FALL:\n1. Bedöm skador (ABCDE om allvarligt)\n2. Larma vid behov\n3. Dokumentera: Tid, plats, vittnen, skador\n4. Händelseanalys\n5. Uppdatera vårdplan"
+  },
+  {
+    "id": "pressure-ulcer",
+    "title": "Trycksårsprevention",
+    "category": "medicine",
+    "shortDescription": "Förebygg och upptäck trycksår tidigt.",
+    "content": "RISKBEDÖMNING:\n• Norton-skala eller Modifierad Norton\n• Braden-skala\n\nRISKFAKTORER:\n• Immobilitet\n• Inkontinens\n• Undernäring/dehydrering\n• Nedsatt känsel\n• Friktion/skjuv\n• Dålig cirkulation\n\nVANLIGA LOKALISATIONER:\n• Sacrum/korsrygg\n• Hälar\n• Höfter (trochanter)\n• Sittbensknölar\n• Öron, axlar, armbågar\n\nKATEGORIER:\n• Kategori 1: Rodnad som ej bleknar\n• Kategori 2: Delhudsskada, blåsa\n• Kategori 3: Fullhudsskada\n• Kategori 4: Djup vävnadsskada\n\nPREVENTION:\n□ Lägesändring var 2:e timme\n□ Tryckavlastande madrass/kuddar\n□ Hälavlastning\n□ Inspektera huden dagligen\n□ Håll huden torr och mjuk\n□ God nutrition och vätska\n□ Minimera friktion vid förflyttning\n□ Dokumentera hudstatus"
+  },
+  {
+    "id": "catheter-care",
+    "title": "KAD-vård",
+    "category": "medicine",
+    "shortDescription": "Skötsel av urinkateter.",
+    "content": "DAGLIG SKÖTSEL:\n□ Handhygien före och efter\n□ Tvätta runt katetern med tvål och vatten\n□ Ingen rutin för kateterbyten – byt vid behov\n□ Påsen under blåsnivå, ej på golvet\n□ Töm påsen regelbundet (fyll max 2/3)\n□ Undvik att böja/knäcka slangen\n□ Kontrollera att urinen rinner\n\nOBSERVERA:\n• Urinmängd och färg\n• Tecken på UVI:\n  - Feber\n  - Grumlig/illaluktande urin\n  - Smärta/obehag\n  - Förvirring (äldre)\n• Läckage runt katetern\n• Blockeringar\n\nKOMPLIKATIONER:\n• UVI – vanligast\n• Uretrastriktur\n• Blåssten\n• Kateterassocierad trauma\n\nFÖRKORTA KATETERTID:\n• Daglig bedömning: Behövs KAD fortfarande?\n• Överväg alternativen: Blåsscanning, intermittent kateterisering\n\nDOKUMENTERA:\n• Insättningsdatum\n• Storlek\n• Mängd i kuffen\n• Bytesdatum"
+  },
+  {
+    "id": "pvk-care",
+    "title": "PVK-vård",
+    "category": "medicine",
+    "shortDescription": "Skötsel av perifer venkateter.",
+    "content": "DAGLIG KONTROLL:\n□ Inspektera insticksstället\n□ Kontrollera fixering\n□ Palpera för ömhet\n□ Spola med NaCl vid intermittent bruk\n\nTECKEN PÅ KOMPLIKATION:\n• Rodnad\n• Svullnad\n• Värme\n• Smärta/ömhet\n• Läckage\n• Feber\n\nVIP-SCORE (Visual Infusion Phlebitis):\n0 = Inga tecken\n1 = Lätt smärta/rodnad\n2 = Smärta + rodnad/svullnad\n3 = Smärta + rodnad + förhårdnad\n4 = Som 3 + purulent sekretion\n\n≥2 = Avlägsna PVK!\n\nBYTE:\n• Vid tecken på komplikation – omedelbart\n• Rutinbyte: Enligt lokala PM (ofta 72-96h)\n• Akut insatt: Byt inom 24-48h\n\nVID BORTTAGNING:\n• Tryck med steril kompress\n• Kontrollera att katetern är hel\n• Dokumentera\n\nFÖRKORTA ANVÄNDNINGSTID:\n• Daglig bedömning: Behövs PVK fortfarande?\n• Överväg peroral behandling"
+  },
+  {
+    "id": "medication-admin",
+    "title": "Läkemedelsgivning – 6R",
+    "category": "medicine",
+    "shortDescription": "Säker läkemedelsadministrering.",
+    "content": "DE 6 R:EN:\n\n✓ Rätt PATIENT\n  • ID-kontroll (namn + personnummer)\n  • Armband, fråga patienten\n\n✓ Rätt LÄKEMEDEL\n  • Kontrollera namn, styrka\n  • Jämför med ordinationslistan\n\n✓ Rätt DOS\n  • Kontrollera dos\n  • Dubbelkolla beräkningar\n\n✓ Rätt TID\n  • Enligt ordinerad tid\n  • Beakta relation till måltid\n\n✓ Rätt ADMINISTRATIONSSÄTT\n  • po, iv, sc, im, rektalt etc.\n  • Rätt hastighet (iv)\n\n✓ Rätt DOKUMENTATION\n  • Signera direkt efter givning\n  • Dokumentera avvikelser\n\nTÄNK OCKSÅ PÅ:\n• Allergier?\n• Interaktioner?\n• Kontraindikationer?\n• Njur/leverfunktion?\n• Kan patienten svälja?\n\nVID OSÄKERHET:\n→ Ge inte läkemedlet\n→ Kontrollera med kollega/apotekare/läkare"
+  },
+  {
+    "id": "nausea-vomiting",
+    "title": "Illamående & kräkning",
+    "category": "medicine",
+    "shortDescription": "Bedömning och omvårdnad.",
+    "content": "ORSAKER ATT TÄNKA PÅ:\n• Läkemedel (opioder, cytostatika, antibiotika)\n• Infektion (gastroenterit)\n• Förstoppning/ileus\n• Postoperativt\n• Graviditet\n• CNS-påverkan (ökat tryck, vestibulär)\n• Metabolt (uremi, hyperkalcemi)\n• Psykogent\n\nBEDÖMNING:\n• När började det?\n• Utlösande faktorer?\n• Relation till mat/läkemedel?\n• Karaktär på kräkning (gallfärgad, feculent, blod?)\n• Bukstatus\n• Vikt, vätskebalans\n\nOMVÅRDNAD:\n• Lugn miljö, frisk luft\n• Höjd huvudända\n• Små, frekventa måltider\n• Undvik starka dofter\n• Munvård\n• Kall dryck, isbitar\n• Ingefära kan hjälpa\n\nMONITORERA:\n• Vätskebalans (in/ut)\n• Elektrolyter (K, Na)\n• Tecken på dehydrering\n• Viktnedgång\n\nLÄKEMEDEL (enligt ordination):\n• Ondansetron (5-HT3-antagonist)\n• Metoklopramid (prokinetisk)\n• Haloperidol (vid opioidillamående)\n• Antihistaminer (vid vestibulär)"
+  },
+  {
+    "id": "constipation",
+    "title": "Förstoppning",
+    "category": "medicine",
+    "shortDescription": "Bedömning och åtgärder.",
+    "content": "DEFINITION:\n• <3 avföringar/vecka\n• Hård avföring, krystning\n• Känsla av ofullständig tömning\n\nORSAKER:\n• Läkemedel (opioder, järn, kalcium)\n• Immobilitet\n• Lågt fiberintag\n• Vätskeförlust\n• Underliggande sjukdom\n• Ignorerade trängningar\n\nBEDÖMNING:\n• Bristol Stool Scale (1-7)\n• Senaste avföring?\n• Normalt mönster?\n• Bukstatus (distension, ömhet)\n• Läkemedel?\n• Kost och vätska?\n\nÅTGÄRDER – STEGVIS:\n\n1. Livsstilsåtgärder:\n□ Öka vätskeintag (1.5-2 L/dag)\n□ Fiberrik kost\n□ Mobilisering\n□ Regelbundna toalettvanor\n□ Svara på trängningar\n\n2. Osmotiska laxantia:\n• Laktulos, Movicol\n\n3. Kontaktlaxantia:\n• Cilaxoral (vid behov)\n\n4. Rektala åtgärder:\n• Klyx (Resulax, Microlax)\n• Manuell rektalpalpation\n\nVID OPIOIDBEHANDLING:\n→ Laxantia profylaktiskt!\n\nVARNINGSTECKEN:\n• Nytillkommen förstoppning >50 år\n• Blod i avföring\n• Viktnedgång\n• Svår buksmärta"
+  },
+  {
     "id": "icu-abcde",
     "title": "ABCDE-repetition",
     "category": "icu",
@@ -40,6 +110,62 @@
     "category": "icu",
     "shortDescription": "Kort mall för säker kommunikation.",
     "content": "S: Vad är problemet? B: Kort bakgrund. A: Aktuella observationer. R: Vad behövs härnäst enligt PM."
+  },
+  {
+    "id": "icu-arterial-line",
+    "title": "Artärnål – skötsel",
+    "category": "icu",
+    "shortDescription": "Hantering av invasiv artärmonitorering.",
+    "content": "DAGLIG KONTROLL:\n□ Insticksställe: Rodnad, svullnad, blödning?\n□ Förband: Rent, torrt, intakt?\n□ Kopplingarna: Täta? Inga luftbubblor?\n□ Tryckgivare: I rätt nivå (hjärtat)?\n□ Kurvans utseende: Normal dämpning?\n□ Spola var 4:e timme (ej manuellt trycka)\n\nNORMAL KURVA:\n• Tydlig systolisk topp\n• Dikrot hak\n• Diastoliskt minimum\n\nÖVERDÄMPAD KURVA:\n• Rundad topp, lågt systoliskt\n• Orsak: Luft, koagel, kinkning\n• Åtgärd: Spola, kontrollera system\n\nUNDERDÄMPAD KURVA:\n• Spik/oscillationer\n• Orsak: Stela slangar, luft\n• Åtgärd: Kontrollera kopplingar\n\nKOMPLIKATIONER:\n• Blödning – kontrollera kopplingar\n• Infektion – aseptisk teknik\n• Trombos/embolism – observera distal cirkulation\n• Nervskada\n\nOBSERVERA HAND:\n• Färg, värme, kapillär återfyllnad\n• Puls (radialis om femoralis, dorsalis pedis om femoralis)\n\nBORTTAGNING:\n• Tryck minst 5 min (längre vid antikoagulation)\n• Tryckförband\n• Kontrollera cirkulation"
+  },
+  {
+    "id": "icu-cvk-care",
+    "title": "CVK-skötsel",
+    "category": "icu",
+    "shortDescription": "Central venkateter – daglig omvårdnad.",
+    "content": "DAGLIG KONTROLL:\n□ Insticksställe: Rodnad, svullnad, sekretion?\n□ Förband: Rent, torrt, intakt?\n□ Datum på förband?\n□ Alla kranar stängda när ej i bruk?\n□ Kopplingar täta?\n□ Ingen dragning i katetern?\n\nFÖRBANDSBYTE:\n• Transparent förband: Var 7:e dag\n• Gasförband: Var 2:a dag\n• Alltid vid fukt/smuts/lossnat\n• Steril teknik!\n\nINFUSIONSSAT:\n• Byte var 72-96h (enl PM)\n• Lipider/blod: Var 24h\n• Propofol: Var 12h\n\nVID PROVTAGNING/INJEKTION:\n• Desinfektion av injektionsmembran 15 sek\n• Låt torka\n• Spola före och efter\n\nKOMPLIKATIONER ATT OBSERVERA:\n• Infektion (feber, rodnad, pus)\n• Trombos (svullnad i arm/hals)\n• Kateterdislokation\n• Pneumothorax (efter inläggning)\n• Arytmi (kateter i hjärtat)\n\nFÖRKORTA ANVÄNDNINGSTID:\n• Daglig bedömning: Behövs CVK?\n• Dokumentera indikation"
+  },
+  {
+    "id": "icu-blood-gas",
+    "title": "Blodgas – tolkning",
+    "category": "icu",
+    "shortDescription": "Systematisk tolkning av arteriell blodgas.",
+    "content": "NORMALVÄRDEN (arteriell):\n• pH: 7.35-7.45\n• pCO2: 4.5-6.0 kPa (35-45 mmHg)\n• pO2: 11-14 kPa (80-100 mmHg)\n• HCO3: 22-26 mmol/L\n• BE: ±2\n• Laktat: <2 mmol/L\n\nTOLKNINGSSTEG:\n\n1. OXYGENERING – pO2\n• >10 kPa = Normalt\n• <8 kPa = Hypoxemi\n\n2. pH – ACIDOS ELLER ALKALOS?\n• <7.35 = Acidos\n• >7.45 = Alkalos\n\n3. RESPIRATORISK ELLER METABOL?\n• pCO2 avviker = Respiratorisk komponent\n• HCO3/BE avviker = Metabol komponent\n\n4. KOMPENSATION?\n• Delvis eller fullständig?\n\nSNABBÖVERSIKT:\n\n• Respiratorisk acidos: pH↓ pCO2↑\n  → Hypoventilation\n\n• Respiratorisk alkalos: pH↑ pCO2↓\n  → Hyperventilation\n\n• Metabol acidos: pH↓ HCO3↓ BE↓\n  → Laktat, ketoner, njursvikt, diarré\n\n• Metabol alkalos: pH↑ HCO3↑ BE↑\n  → Kräkningar, diuretika\n\nLAKTAT:\n• >2 = Förhöjt\n• >4 = Signifikant hypoperfusion\n\nOBSERVERA OCKSÅ:\n• Hb, elektrolyter, glukos"
+  },
+  {
+    "id": "icu-postop-check",
+    "title": "Postop övervakning",
+    "category": "icu",
+    "shortDescription": "Systematisk kontroll efter operation.",
+    "content": "DIREKT VID ANKOMST:\n\n□ RAPPORT från anestesi:\n  • Ingrepp och fynd\n  • Anestesiform\n  • Blödning/vätsketillförsel\n  • Problem under op?\n  • Smärtlindring\n  • Ordinationer\n\n□ ABCDE-BEDÖMNING:\n  • Luftväg fri?\n  • Andning: Frekvens, djup, saturation\n  • Cirkulation: Puls, BT, EKG\n  • Medvetande: Vaken? Följer uppmaningar?\n  • Exponering: Temp, förband, drän\n\n□ KONTROLLERA:\n  • Operationsområde/förband\n  • Drän (mängd, utseende)\n  • KAD (urinproduktion)\n  • PVK/CVK/artärnål\n  • Smärtnivå\n\nFÖRSTA TIMMARNA:\n• Vitalparametrar var 15 min → 30 min → 1h\n• Vakenhetsgrad\n• Smärtskattning\n• PONV (illamående/kräkning)\n• Blödning\n• Urinproduktion\n\nVARNINGSTECKEN:\n🚨 Okontaktbar/svårväckt\n🚨 Andningsdepression\n🚨 Hypotension\n🚨 Takykardi\n🚨 Stor blödning\n🚨 Ingen urin\n\nDOKUMENTERA:\n• Ankomsttid och status\n• Vitalparametrar\n• Smärta och åtgärder"
+  },
+  {
+    "id": "icu-cpr",
+    "title": "HLR – vuxen",
+    "category": "icu",
+    "shortDescription": "Hjärt-lungräddning grundläggande.",
+    "content": "VID HJÄRTSTOPP:\n\n1. SÄKERHET + MEDVETANDEKONTROLL\n   • Skaka + ropa\n   • Ingen reaktion?\n\n2. ROPA PÅ HJÄLP + LARMA\n   • 112 eller interna larmnummer\n   • Hämta defibrillator\n\n3. KONTROLLERA ANDNING\n   • Fria luftvägar (käklyft)\n   • Se, lyssna, känn (max 10 sek)\n   • Ingen/onormal andning = hjärtstopp\n\n4. STARTA HLR\n   • 30 kompressioner : 2 inblåsningar\n   • Frekvens: 100-120/min\n   • Djup: 5-6 cm\n   • Fullständig recoil\n   • Minimera avbrott\n\n5. DEFIBRILLATOR\n   • Sätt på elektroder\n   • Följ instruktioner\n   • Stötbar rytm? → Defibrillera\n   • Fortsätt HLR direkt efter stöt\n\nLÄKEMEDEL (A-HLR):\n• Adrenalin 1mg iv var 3-5 min\n• VF/VT: Amiodaron 300mg efter 3:e stöten\n\nRYTMER:\n• Stötbara: VF, pulslös VT\n• Icke-stötbara: Asystoli, PEA\n\nREVERSIBLA ORSAKER (4H + 4T):\n• Hypoxi, Hypovolemi, Hypokalemi, Hypotermi\n• Tamponad, Tension pneumothorax, Trombos, Toxiner"
+  },
+  {
+    "id": "icu-ventilator-alarms",
+    "title": "Ventilatorlarm – felsökning",
+    "category": "icu",
+    "shortDescription": "Tolka och åtgärda vanliga larm.",
+    "content": "HÖGTRYCKSLARM:\n\nOrsaker:\n• Hosta, slem i luftvägarna\n• Patient biter i tuben\n• Bronkospasm\n• Kinkning av slang/tub\n• Pneumothorax\n• Felläge av tub (för djupt)\n\nÅtgärder:\n→ Sug i tuben\n→ Kontrollera tubläge\n→ Kontrollera slangar\n→ Auskultera lungor\n→ Bronkdilaterare vid spasm?\n→ Sedera vid stark hosta/kamp\n\nLÅGTRYCKSLARM / LÅGT TIDALVOLYM:\n\nOrsaker:\n• Läckage i systemet\n• Kuffläckage\n• Tuben ur läge/extubation\n• Diskonnektion\n\nÅtgärder:\n→ Kontrollera kopplingar\n→ Kontrollera kufftryck (20-30 cmH2O)\n→ Kontrollera tubläge\n→ Ventilera manuellt om nödvändigt\n\nHÖG ANDNINGSFREKVENS:\n\nOrsaker:\n• Smärta/obehag\n• Hypoxi\n• För lite sedation\n• Feber\n• Acidos\n\nÅtgärder:\n→ Kontrollera saturation/blodgas\n→ Smärtstatus\n→ Sedering tillräcklig?\n\nAPNÉLARM:\n→ Kontrollera patienten!\n→ Stimulera\n→ Manuell ventilation vid behov\n\nVID OSÄKERHET:\n→ Koppla bort ventilator\n→ Ventilera manuellt med blåsa\n→ Tillkalla hjälp"
+  },
+  {
+    "id": "wound-care",
+    "title": "Sårvård – grunder",
+    "category": "medicine",
+    "shortDescription": "Systematisk sårbehandling.",
+    "content": "SÅRBEDÖMNING:\n• Lokalisation och storlek\n• Sårtyp (akut, kroniskt, kirurgiskt)\n• Sårbotten (granulation, fibrin, nekros)\n• Exsudat (mängd, färg, lukt)\n• Sårkanter\n• Omgivande hud\n• Tecken på infektion\n\nINFEKTIONSTECKEN:\n• Ökad smärta\n• Rodnad som sprider sig\n• Svullnad, värme\n• Purulent sekretion\n• Lukt\n• Feber\n• Sårläkning stannar av\n\nPRINCIPER:\n1. Rengör såret (NaCl, kranvatten)\n2. Debridera vid behov\n3. Välj förband efter sårtyp:\n   • Torrt sår → fuktighetsbevara\n   • Vått sår → absorbera\n4. Skydda omgivande hud\n5. Optimera läkningsförutsättningar\n\nFÖRBANDSVAL:\n• Lite exsudat: Hydrokolloid, film\n• Måttligt exsudat: Skumförband\n• Mycket exsudat: Alginat, hydrofiber\n• Infektion: Silverförband\n• Nekros: Hydrogel, mekanisk debridering\n\nDOKUMENTERA:\n• Storlek (mät!)\n• Foto om möjligt\n• Behandling\n• Utvärdera regelbundet"
+  },
+  {
+    "id": "oral-care",
+    "title": "Munvård",
+    "category": "medicine",
+    "shortDescription": "Munhälsa hos sjuka patienter.",
+    "content": "VARFÖR VIKTIGT?\n• Förebygger infektioner (VAP, pneumoni)\n• Komfort och välbefinnande\n• Nutrition\n• Förebygger sår\n\nBEDÖMNING (ROAG):\n• Röst\n• Läppar\n• Munslemhinna\n• Tunga\n• Tandkött\n• Tänder/proteser\n• Saliv\n• Sväljning\n\nÅTGÄRDER:\n\nFRISK MUN:\n• Tandborstning x 2\n• Fluoridtandkräm\n• Läppbalsam vid behov\n\nTORR MUN:\n• Öka vätska om möjligt\n• Saliversättning\n• Undvik munvatten med alkohol\n• Smörj läppar\n• Fuktande gel\n\nSÅR/INFEKTIONER:\n• Mjuk tandborste\n• Klorhexidin (kort period)\n• Smärtstillande gel\n• Svampbehandling vid candidainfektion\n\nINTUBERAD PATIENT:\n• Munvård var 4-6:e timme\n• Sug i munhåla\n• Klorhexidin enligt PM\n• Lägesändring av tub\n• Fukta läppar\n\nPROTESER:\n• Ta ut nattetid\n• Borsta proteser\n• Förvara i vatten"
   },
   {
     "id": "knee-pain-assessment",
@@ -103,5 +229,26 @@
     "category": "ortho",
     "shortDescription": "Allvarliga tecken som kräver snabb åtgärd.",
     "content": "SÖKA AKUT:\n\n🚨 SEPTISK ARTRIT:\n• Snabbt insättande smärta, svullnad\n• Värmeökning, rodnad\n• Feber, allmänpåverkan\n• Kan inte belasta/röra\n• Risk: Tidigare infektion, immunsuppression, protes\n→ AKUT LEDPUNKTION! Antibiotika efter odling.\n\n🚨 TRAUMA MED HEMARTROS:\n• Snabb svullnad (<2h) efter trauma\n• Indikerar blödning i leden\n• Misstanke: ACL-ruptur, fraktur, patellaluxation\n→ Röntgen, ev MR, ortopedkonsult\n\n🚨 AKUT KÄRLPÅVERKAN:\n• Kall, blek fot\n• Nedsatt/utsläckt puls\n• Svår smärta\n• Risk vid knäluxation\n→ KÄRLKIRURGJOUR!\n\n🚨 KOMPARTMENTSYNDROM:\n• Svår smärta, värre vid passiv stretch\n• Spänd muskulatur\n• Parestesier\n• Risk efter trauma, operation, gips\n→ Akut tryckmätning, ev fasciotomi\n\n🚨 DJUP VENTROMBOS (DVT):\n• Vadsvullnad, värme\n• Smärta i vaden\n• Risk efter kirurgi, immobilisering\n→ D-dimer, ultraljud"
+  },
+  {
+    "id": "hip-postop",
+    "title": "Postop höftprotes",
+    "category": "ortho",
+    "shortDescription": "Omvårdnad efter total höftplastik.",
+    "content": "OPERATIONSMETOD PÅVERKAR RESTRIKTIONER:\n\nBAKRE SNITT (vanligast):\n• Undvik flexion >90°\n• Undvik inåtrotation\n• Undvik adduktion över medellinjen\n• Kudde mellan benen vid sängläge\n\nFRÄMRE/LATERAL:\n• Ofta färre restriktioner\n• Följ kirurgens instruktioner\n\nDAG 0-1:\n• Smärtlindring (multimodal)\n• Tidig mobilisering (samma dag ofta)\n• Trombosprofylax\n• Kontrollera distal cirkulation\n\nOBSERVERA:\n• Blödning i förband/drän\n• Benlängdsskillnad\n• Nervskada (droppfot?)\n• Luxationstecken:\n  - Plötslig smärta\n  - Benförkortning\n  - Utåt/inåtrotation\n\nMOBILISERING:\n• Gånghjälpmedel 4-6 veckor\n• Höjda sittytor (toalett, stol)\n• Undvik låga stolar/mjuka soffor\n• Ej böja sig för att ta på skor/strumpor\n\nUTSKRIVNINGSINFORMATION:\n• Restriktioner i 6-12 veckor\n• Trombosprofylax (duration enl ordination)\n• Fysioterapi\n• Varningssignaler\n• Infektionsprofylax vid tandläkarbesök"
+  },
+  {
+    "id": "fracture-care",
+    "title": "Frakturvård – grunder",
+    "category": "ortho",
+    "shortDescription": "Omvårdnad vid benbrott.",
+    "content": "AKUT OMHÄNDERTAGANDE:\n• Smärtlindring!\n• Immobilisera\n• Kontrollera distal cirkulation, motorik, sensibilitet\n• Elevation\n• Kyla (ej direkt på hud)\n\nGIPSVÅRD:\n\nObservera:\n• 5 P: Pain, Pallor, Pulselessness, Paresthesia, Paralysis\n• Svullnad\n• Tryckpunkter\n• Gipsets integritet\n\nPatientinformation:\n• Håll högt de första dagarna\n• Rör på fria leder\n• Ej stoppa in föremål under gipset\n• Håll torrt\n• Kontakta vid: Ökad smärta, domningar, blåa/vita fingrar/tår, lukt\n\nKOMPLIKATIONER:\n• Kompartmentsyndrom (akut!)\n• Nervskada\n• Kärlskada\n• Infektion (öppen fraktur)\n• DVT\n• Non-union/mal-union\n• Komplex regionalt smärtsyndrom (CRPS)\n\nTROMBOSPROFYLAX:\n• Enligt PM, särskilt vid:\n  - Nedre extremitetsfraktur\n  - Immobilisering\n  - Riskfaktorer\n\nREHABILITERING:\n• Tidig mobilisering av fria leder\n• Fysioterapi\n• Gradvis ökad belastning"
+  },
+  {
+    "id": "back-pain",
+    "title": "Ryggsmärta – bedömning",
+    "category": "ortho",
+    "shortDescription": "Systematisk bedömning av ryggbesvär.",
+    "content": "ANAMNES:\n• Lokalisation (ländrygg vanligast)\n• Debut (akut, smygande)\n• Utstrålning (ischiassmärta?)\n• Förvärrar/lindrar\n• Tidigare ryggbesvär\n• Röda flaggor?\n\nRÖDA FLAGGOR – AKUT ÅTGÄRD:\n🚨 Cauda equina-syndrom:\n• Ridbyxanestesi (domning perineum)\n• Urinretention/inkontinens\n• Avföringsinkontinens\n• Bilateral bensvaghet\n→ AKUT MR + KIRURGI\n\n🚨 Malignitet/infektion:\n• Nattsmärta som väcker\n• Viktnedgång\n• Feber\n• Känd cancer\n• Immunsuppression\n\n🚨 Fraktur:\n• Trauma\n• Osteoporos\n• Steroidbehandling\n\nGULA FLAGGOR (psykosociala):\n• Katastroftankar\n• Undvikandebeteende\n• Låg tilltro till återhämtning\n• Arbetssituation\n• Depression/ångest\n\nOMVÅRDNAD VID OKOMPLICERAD:\n• Smärtlindring\n• Undvik sängläge – fortsätt aktivitet\n• Information och lugnande\n• Ergonomi\n• Fysioterapi"
   }
 ]
