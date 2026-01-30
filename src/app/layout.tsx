@@ -1,5 +1,6 @@
 import "./globals.css";
 import { LanguageProvider } from "../lib/LanguageContext";
+import { ThemeProvider } from "../lib/ThemeContext";
 import { Header } from "./Header";
 
 export const metadata = {
@@ -33,14 +34,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-gradient-to-b from-neutral-50 via-white to-neutral-100 text-neutral-900">
-        <LanguageProvider>
-          <div className="mx-auto flex min-h-screen w-full max-w-4xl flex-col px-5 py-6 sm:px-6">
-            <Header />
-            <main className="flex-1">{children}</main>
-          </div>
-        </LanguageProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-gradient-to-b from-neutral-50 via-white to-neutral-100 text-neutral-900 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950 dark:text-neutral-100">
+        <ThemeProvider>
+          <LanguageProvider>
+            <div className="mx-auto flex min-h-screen w-full max-w-4xl flex-col px-5 py-6 sm:px-6">
+              <Header />
+              <main className="flex-1">{children}</main>
+            </div>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -7,6 +7,10 @@ export const translations = {
       knowledge: "Knowledge",
       notes: "Notes",
       boris: "Boris",
+      calculator: "Calculator",
+      search: "Search",
+      darkMode: "Dark mode",
+      lightMode: "Light mode",
     },
 
     // Home page
@@ -100,6 +104,44 @@ export const translations = {
       password: "Password",
       submit: "Log in",
     },
+
+    // Search
+    search: {
+      title: "Search",
+      placeholder: "Search tools and knowledge...",
+      noResults: "No results found",
+      tools: "Tools",
+      knowledge: "Knowledge",
+    },
+
+    // Calculator
+    calc: {
+      title: "Calculator",
+      subtitle: "Common nursing calculations",
+      dripRate: "Drip rate",
+      dripRateDesc: "Calculate drops per minute",
+      volume: "Volume (ml)",
+      time: "Time (hours)",
+      dropFactor: "Drop factor (drops/ml)",
+      result: "Result",
+      dropsPerMin: "drops/min",
+      mlPerHour: "ml/hour",
+      dosage: "Dosage",
+      dosageDesc: "Calculate dose based on weight",
+      dose: "Dose (mg/kg)",
+      weight: "Weight (kg)",
+      totalDose: "Total dose",
+      bmi: "BMI",
+      bmiDesc: "Body Mass Index",
+      height: "Height (cm)",
+      bmiResult: "BMI",
+      bmiUnderweight: "Underweight",
+      bmiNormal: "Normal",
+      bmiOverweight: "Overweight",
+      bmiObese: "Obese",
+      calculate: "Calculate",
+      clear: "Clear",
+    },
   },
 
   sv: {
@@ -110,6 +152,10 @@ export const translations = {
       knowledge: "Kunskap",
       notes: "Anteckningar",
       boris: "Boris",
+      calculator: "Kalkylator",
+      search: "Sök",
+      darkMode: "Mörkt läge",
+      lightMode: "Ljust läge",
     },
 
     // Home page
@@ -202,6 +248,44 @@ export const translations = {
       email: "E-post",
       password: "Lösenord",
       submit: "Logga in",
+    },
+
+    // Search
+    search: {
+      title: "Sök",
+      placeholder: "Sök verktyg och kunskap...",
+      noResults: "Inga resultat hittades",
+      tools: "Verktyg",
+      knowledge: "Kunskap",
+    },
+
+    // Calculator
+    calc: {
+      title: "Kalkylator",
+      subtitle: "Vanliga beräkningar inom omvårdnad",
+      dripRate: "Dropptakt",
+      dripRateDesc: "Beräkna droppar per minut",
+      volume: "Volym (ml)",
+      time: "Tid (timmar)",
+      dropFactor: "Droppfaktor (droppar/ml)",
+      result: "Resultat",
+      dropsPerMin: "droppar/min",
+      mlPerHour: "ml/timme",
+      dosage: "Dosering",
+      dosageDesc: "Beräkna dos baserat på vikt",
+      dose: "Dos (mg/kg)",
+      weight: "Vikt (kg)",
+      totalDose: "Total dos",
+      bmi: "BMI",
+      bmiDesc: "Body Mass Index",
+      height: "Längd (cm)",
+      bmiResult: "BMI",
+      bmiUnderweight: "Undervikt",
+      bmiNormal: "Normalvikt",
+      bmiOverweight: "Övervikt",
+      bmiObese: "Fetma",
+      calculate: "Beräkna",
+      clear: "Rensa",
     },
   },
 } as const;
