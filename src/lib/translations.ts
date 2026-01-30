@@ -45,6 +45,9 @@ export const translations = {
       labbTitle: "Lab Interpreter",
       labbDesc: "Enter lab values and get Boris to explain them.",
       labbLink: "Interpret labs →",
+      symtomTitle: "Symptom Checker",
+      symtomDesc: "Describe symptoms and get help thinking through differential diagnoses.",
+      symtomLink: "Analyze symptoms →",
       // FAQ
       faqTitle: "How to get the most out of NurseCore",
       faq1q: "What is NurseCore?",
@@ -239,6 +242,9 @@ export const translations = {
       labbTitle: "Labb-tolkare",
       labbDesc: "Mata in labbvärden och låt Boris förklara dem.",
       labbLink: "Tolka labbvärden →",
+      symtomTitle: "Symtom-checker",
+      symtomDesc: "Beskriv symtom och få hjälp att tänka differentialdiagnostiskt.",
+      symtomLink: "Analysera symtom →",
       // FAQ
       faqTitle: "Så får du ut mest av NurseCore",
       faq1q: "Vad är NurseCore?",

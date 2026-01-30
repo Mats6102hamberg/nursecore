@@ -138,6 +138,25 @@ export default function HomePage() {
             {t.home.labbLink}
           </span>
         </a>
+        <a
+          href="/symtom"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-orange-200 bg-gradient-to-br from-orange-50 to-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-orange-900/50 dark:from-orange-950/30 dark:to-neutral-800"
+        >
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-xl">🩺</span>
+              <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+                {t.home.symtomTitle}
+              </h2>
+            </div>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+              {t.home.symtomDesc}
+            </p>
+          </div>
+          <span className="text-sm font-medium text-orange-700 dark:text-orange-400">
+            {t.home.symtomLink}
+          </span>
+        </a>
 
         <a
           href="/notes"

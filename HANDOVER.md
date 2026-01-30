@@ -1,280 +1,197 @@
-# NurseCore - Session Handover
+# NurseCore - Session Handover & Summary
+
+## Quick Summary
+NurseCore är en svensk klinisk verktygslåda för sjuksköterskor. I denna session har vi byggt ut Boris AI med 8 förbättringar och skapat 5 nya kliniska verktyg.
+
+---
 
 ## Project Overview
-NurseCore is a Swedish nursing clinical toolkit web app. A calm, structured place for daily nursing work and study with AI support.
+
+**Vad är NurseCore?**
+En lugn, strukturerad app för dagligt vårdarbete och studier. Allt på ett ställe: checklistor, AI-stöd med Boris, kliniska kalkylatorer och kunskapsbank.
 
 **Tech Stack:**
 - Next.js 14 (App Router)
 - TypeScript
-- Tailwind CSS with dark mode (class strategy)
-- OpenAI API (GPT-4o for vision, GPT-4o-mini for text)
-- react-markdown for rendering AI responses
+- Tailwind CSS med dark mode (class strategy)
+- OpenAI API (GPT-4o för vision, GPT-4o-mini för text)
+- react-markdown för rendering av Boris-svar
+
+**Miljövariabler:**
+```
+OPENAI_API_KEY=sk-...  # Krävs för Boris AI
+```
 
 ---
 
-## Session Summary (January 2025)
+## Session Summary (Januari 2025)
 
-### Boris AI Enhancements
-Boris is the AI assistant. Major improvements made:
+### Boris AI - 8 Förbättringar
 
-1. **Markdown formatting** - Boris responses render with headers, lists, bold text
-2. **Conversation history** - Maintains context (last 10 messages)
-3. **Tool suggestions** - Boris recommends NurseCore tools in responses
-4. **Shift awareness** - Day/Evening/Night modes with contextual advice
-5. **Emotional support** - Detects stress keywords and responds warmly first
-6. **Image analysis** - Upload images for Boris to analyze (uses GPT-4o)
-7. **Professional guidelines** - References "established knowledge" not personal experience
-8. **Smoother phrasing** - Natural Swedish like "Ofta hänger det ihop med..."
+| # | Förbättring | Beskrivning |
+|---|-------------|-------------|
+| 1 | **Markdown-formatering** | Boris svarar med rubriker, listor, fetstil |
+| 2 | **Konversationshistorik** | Minns senaste 10 meddelanden |
+| 3 | **Verktygsförslag** | Föreslår relevanta NurseCore-verktyg |
+| 4 | **Skiftläge** | Dag/Kväll/Natt-anpassade råd |
+| 5 | **Emotionellt stöd** | Känner av stress, bekräftar känslor först |
+| 6 | **Bildanalys** | Ladda upp bilder för analys (GPT-4o) |
+| 7 | **Professionella riktlinjer** | Refererar till "allmänt känd information" |
+| 8 | **Mjukare formuleringar** | "Ofta hänger det ihop med...", "Ett vanligt sätt att förstå detta är..." |
 
-**Key files:**
-- `/src/app/api/boris/route.ts` - Boris backend with all prompts
-- `/src/app/boris/studie/page.tsx` - Study mode (deep learning)
-- `/src/app/boris/jobb/page.tsx` - Work mode (quick support + shift selector)
+**Nyckelcitat från Boris-prompten:**
+```
+Du är Boris – en kunnig och pedagogisk AI-assistent för sjuksköterskor inom svensk sjukvård.
+Du är varm, stöttande och engagerande - aldrig torr eller byråkratisk.
+```
 
-### New Clinical Tools
+### Nya Kliniska Verktyg - 5 st
 
-1. **NEWS2 Calculator** (`/src/app/news2/page.tsx`)
-   - All 7 parameters (respiration, SpO2, oxygen, temp, BP, pulse, consciousness)
-   - Color-coded risk levels (green/yellow/orange/red)
-   - Action recommendations based on score
+| Verktyg | Sökväg | Beskrivning |
+|---------|--------|-------------|
+| **NEWS2** | `/news2` | Interaktiv kalkylator med alla 7 parametrar, färgkodade risknivåer |
+| **SBAR** | `/sbar` | Generator med urgency-väljare, live-preview, kopiera med ett klick |
+| **Labb-tolkare** | `/labb` | 18 vanliga labbvärden + fritext, Boris förklarar kliniskt |
+| **Symtom-checker** | `/symtom` | Differentialdiagnostik, red flags, omvårdnadsåtgärder |
+| **FAQ** | Startsidan | 6 expanderbara frågor om hur man använder appen |
 
-2. **SBAR Generator** (`/src/app/sbar/page.tsx`)
-   - Four sections: Situation, Background, Assessment, Recommendation
-   - Urgency selector (Normal/Urgent/Acute)
-   - Live preview with copy-to-clipboard
+### Övriga Uppdateringar
 
-3. **Lab Interpreter** (`/src/app/labb/page.tsx`)
-   - Quick-select mode: 18 common Swedish lab values
-   - Paste mode: Free text input
-   - Boris AI integration for interpretation
-
-### Other Updates
-
-- **FAQ Section** on home page (`/src/app/page.tsx`)
-  - 6 expandable questions about using the app
-  - Full bilingual support (SV/EN)
-
-- **Dark mode** added to all new components and home page cards
-
-- **Translations** in `/src/lib/translations.ts`
-  - All new features have Swedish and English versions
+- **Dark mode** på alla nya komponenter och startsidans kort
+- **Tvåspråkigt stöd** (SV/EN) för alla nya funktioner
+- **Gradient-kort** på startsidan (röd=NEWS2, blå=SBAR, lila=Labb, orange=Symtom)
 
 ---
 
-## File Structure (Key Files)
+## Filstruktur (Viktiga filer)
 
 ```
 src/
 ├── app/
-│   ├── page.tsx              # Home page with FAQ
+│   ├── page.tsx                 # Startsida med FAQ
 │   ├── boris/
-│   │   ├── studie/page.tsx   # Boris study mode
-│   │   └── jobb/page.tsx     # Boris work mode
-│   ├── news2/page.tsx        # NEWS2 calculator
-│   ├── sbar/page.tsx         # SBAR generator
-│   ├── labb/page.tsx         # Lab interpreter
-│   ├── tools/page.tsx        # Clinical checklists
-│   ├── knowledge/page.tsx    # Knowledge bank
-│   ├── notes/page.tsx        # Personal notes
+│   │   ├── studie/page.tsx      # Boris studieläge
+│   │   └── jobb/page.tsx        # Boris jobbläge (med skiftväljare)
+│   ├── news2/page.tsx           # NEWS2 kalkylator
+│   ├── sbar/page.tsx            # SBAR generator
+│   ├── labb/page.tsx            # Labb-tolkare
+│   ├── symtom/page.tsx          # Symtom-checker (NY!)
+│   ├── tools/page.tsx           # Kliniska checklistor
+│   ├── knowledge/page.tsx       # Kunskapsbank
+│   ├── notes/page.tsx           # Personliga anteckningar
 │   └── api/
-│       └── boris/route.ts    # Boris API endpoint
+│       └── boris/route.ts       # Boris API endpoint (alla prompts här)
 ├── lib/
-│   ├── translations.ts       # All SV/EN translations
-│   ├── LanguageContext.tsx   # Language state
-│   └── ThemeContext.tsx      # Dark mode state
+│   ├── translations.ts          # Alla SV/EN översättningar
+│   ├── LanguageContext.tsx      # Språkhantering
+│   └── ThemeContext.tsx         # Dark mode
 └── data/
-    └── knowledge-content.tsx # Bilingual knowledge articles
+    └── knowledge-content.tsx    # Tvåspråkigt kunskapsinnehåll
 ```
 
 ---
 
-## Environment Variables
+## Kodmönster att känna till
+
+```typescript
+// Språk
+const { t, language } = useLanguage();
+// Använd: t.home.title, language === "sv"
+
+// Dark mode klasser
+className="bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"
+
+// Kort-styling
+className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-800"
+
+// Boris-anrop
+const response = await fetch("/api/boris", {
+  method: "POST",
+  body: JSON.stringify({ message, mode: "medicine", history: [] }),
+});
+
+// Markdown-rendering
+<ReactMarkdown>{borisResponse}</ReactMarkdown>
+```
+
+---
+
+## Git Commits (Denna session)
 
 ```
-OPENAI_API_KEY=sk-...  # Required for Boris AI
-```
-
----
-
-## Known Patterns
-
-- All pages use `useLanguage()` hook for translations
-- Dark mode classes follow pattern: `dark:bg-neutral-800 dark:text-neutral-100`
-- Cards use `rounded-2xl border shadow-sm` styling
-- Boris responses rendered with `<ReactMarkdown>` and prose classes
-- New tools have gradient borders (red=NEWS2, blue=SBAR, purple=Labb)
-
----
-
-## Future Features & Ideas
-
-### "Wow Effect" Features (High Impact)
-
-1. **Symtom-checker med Boris**
-   - Användaren beskriver symtom → Boris ger differentialdiagnoser
-   - Föreslår relevanta undersökningar och prover
-   - "Red flags" varningar för allvarliga tillstånd
-
-2. **Interaktiv fallbaserad inlärning**
-   - Boris presenterar patientfall steg för steg
-   - Användaren fattar beslut → får feedback
-   - Poängsystem och progression
-   - "Dagens fall" - nytt fall varje dag
-
-3. **Rapport-generator för hela passet**
-   - Samla flera SBAR, NEWS2, labbvärden
-   - Generera sammanfattande skiftrapport
-   - Exportera som PDF eller dela
-
-4. **Medicinskåps-scanner**
-   - Fotografera läkemedelsförpackning
-   - Boris identifierar och ger info om:
-     - Indikationer, kontraindikationer
-     - Vanliga biverkningar
-     - Omvårdnadsaspekter
-
-5. **EKG-tolkare**
-   - Ladda upp EKG-bild
-   - Boris analyserar rytm, intervall, avvikelser
-   - Pedagogisk förklaring av fynd
-
-6. **Röstassistent för Boris**
-   - Hands-free under arbetet
-   - "Hej Boris, vad är normalt CVP?"
-   - Text-to-speech för svar
-
-### Kliniska Verktyg (Medium Impact)
-
-7. **Vätskebalans-kalkylator**
-   - Input/output tracking
-   - Beräkna nettovätska
-   - Varning vid obalans
-
-8. **Infusionshastighet-räknare**
-   - Dos per kg, ml/h, droppar/min
-   - Spädningsberäkningar
-   - Vanliga protokoll (ex. Noradrenalin)
-
-9. **GCS-kalkylator (Glasgow Coma Scale)**
-   - Interaktiv poängsättning
-   - Tolkning och åtgärdsförslag
-
-10. **RASS/CAM-ICU för sedation**
-    - Sedering och delirium-screening
-    - Dokumentationshjälp
-
-11. **Smärtskattning multi-skala**
-    - VAS, NRS, Abbey (demens), FLACC (barn)
-    - Hjälp välja rätt skala
-
-12. **Nutritionsscreening (NRS-2002)**
-    - Steg-för-steg screening
-    - Åtgärdsförslag baserat på poäng
-
-13. **Fallriskbedömning (Downton)**
-    - Interaktiv checklista
-    - Förebyggande åtgärder
-
-14. **Trycksårsprevention (Norton/Braden)**
-    - Riskbedömning
-    - Lägesändringsschema
-
-### Kunskapsbank-expansion
-
-15. **Akuta tillstånd**
-    - Sepsis, anafylaxi, lungödem
-    - Steg-för-steg handläggning
-
-16. **Läkemedelskunskap**
-    - Vanliga vårdavdelningsläkemedel
-    - Omvårdnadsaspekter per läkemedel
-
-17. **Procedur-guider**
-    - KAD-sättning, PVK, sugning
-    - Steg-för-steg med bilder
-
-18. **Anatomi & fysiologi-repetition**
-    - Interaktiva illustrationer
-    - Koppling till kliniken
-
-### Användarupplevelse
-
-19. **Personlig dashboard**
-    - Favorit-verktyg snabbåtkomst
-    - Senaste Boris-konversationer
-    - Studiestatistik
-
-20. **Mörkt läge schema**
-    - Automatiskt nattläge baserat på klockslag
-    - Extra dämpad för nattpass
-
-21. **Offline-läge (PWA)**
-    - Verktyg fungerar utan internet
-    - Kunskapsbank cachad lokalt
-
-22. **Delning & export**
-    - Dela SBAR via SMS/mail
-    - Exportera beräkningar som bild
-
-### Gamification & Motivation
-
-23. **Daglig utmaning**
-    - En fråga per dag från Boris
-    - Streak-räknare för kontinuerligt lärande
-
-24. **Kunskapsquiz**
-    - Testa dig själv per ämne
-    - Spaced repetition för svåra frågor
-
-25. **Certifikat/badges**
-    - "Genomfört IBD-modulen"
-    - Delbart på LinkedIn
-
-### Integration & Samarbete
-
-26. **Team-funktioner**
-    - Dela checklistor inom teamet
-    - Gemensam kunskapsbank med egna tillägg
-
-27. **Kalender-integration**
-    - Påminnelser för studiepass
-    - Synka med arbetsschema
-
-28. **Anonymiserad statistik**
-    - Vilka verktyg används mest
-    - Vanligaste Boris-frågorna (för att förbättra)
-
----
-
-## Recommended Priority Order
-
-**Snabba vinster (1-2 timmar vardera):**
-1. GCS-kalkylator (#9)
-2. Vätskebalans-kalkylator (#7)
-3. Smärtskattning multi-skala (#11)
-
-**Medium effort, high value (halv dag):**
-4. Interaktiv fallbaserad inlärning (#2)
-5. Symtom-checker med Boris (#1)
-6. Röstassistent (#6)
-
-**Större projekt (1+ dag):**
-7. EKG-tolkare (#5)
-8. Offline-läge PWA (#21)
-9. Medicinskåps-scanner (#4)
-
----
-
-## Recent Git Commits
-
-```
+07cc570 docs: add 28 future feature ideas to handover
+17c87f4 docs: add session handover for next agent
 da2cb29 feat: add FAQ section to home page
 fb9c491 feat: add NEWS2, SBAR, and lab interpreter tools
 b80fd7d style: add smoother phrasing to Boris responses
 6a6592b refactor: align Boris with professional guidelines
 6c2edd8 fix: make Boris more helpful with image analysis
+[+ tidigare commits för Boris-förbättringar]
 ```
 
 ---
 
-*Last updated: January 2025*
+## Framtida Funktioner (28 idéer)
+
+### "Wow Effect" (Högsta prioritet)
+1. ~~Symtom-checker med Boris~~ ✅ KLAR
+2. Interaktiv fallbaserad inlärning med poängsystem
+3. Rapport-generator för hela passet
+4. Medicinskåps-scanner (fotografera läkemedel)
+5. EKG-tolkare
+6. Röstassistent för Boris
+
+### Kliniska Verktyg (Medium prioritet)
+7. Vätskebalans-kalkylator
+8. Infusionshastighet-räknare
+9. GCS-kalkylator
+10. RASS/CAM-ICU
+11. Smärtskattning multi-skala
+12. Nutritionsscreening (NRS-2002)
+13. Fallriskbedömning (Downton)
+14. Trycksårsprevention (Norton/Braden)
+
+### Kunskapsbank
+15. Akuta tillstånd (sepsis, anafylaxi)
+16. Läkemedelskunskap
+17. Procedur-guider med bilder
+18. Anatomi & fysiologi
+
+### UX & Gamification
+19. Personlig dashboard
+20. Automatiskt nattläge
+21. Offline-läge (PWA)
+22. Delning & export
+23. Daglig utmaning
+24. Kunskapsquiz
+25. Certifikat/badges
+26. Team-funktioner
+27. Kalender-integration
+28. Anonymiserad statistik
+
+### Rekommenderad prioritet för nästa agent
+**Snabba vinster:** GCS, Vätskebalans, Smärtskattning
+**Medium effort:** Fallbaserad inlärning, Röstassistent
+**Större projekt:** EKG-tolkare, PWA, Medicinskåps-scanner
+
+---
+
+## Kända begränsningar
+
+- Boris ger aldrig doseringsråd eller behandlingsbeslut
+- Ingen persistent lagring (anteckningar i localStorage)
+- Ingen användarautentisering än
+- Boris-historik försvinner vid sidladdning
+
+---
+
+## Kontakt & Support
+
+- Användare kan rapportera problem via FAQ
+- Lokala PM och ansvarig läkare ska alltid konsulteras
+- Appen är ett komplement, inte ersättning för professionellt omdöme
+
+---
+
+*Senast uppdaterad: Januari 2025*
+*Session: Boris AI förbättringar + 5 nya kliniska verktyg*
