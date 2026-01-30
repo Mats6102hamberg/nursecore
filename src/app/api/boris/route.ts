@@ -196,6 +196,7 @@ export async function POST(request: Request) {
   const mode = body?.mode as BorisMode | undefined;
   const history = (body?.history ?? []) as ChatMessage[];
   const shift = body?.shift as Shift;
+  const imageBase64 = body?.image as string | undefined; // Base64 encoded image
 
   if (!message || typeof message !== "string" || !mode) {
     return NextResponse.json(
@@ -225,6 +226,31 @@ export async function POST(request: Request) {
     systemPrompt += SHIFT_CONTEXT[shift];
   }
 
+  // Add image analysis context if image is provided
+  if (imageBase64) {
+    systemPrompt += `\n\n## BILDANALYS
+Du har fått en bild att analysera. Beskriv vad du ser och ge omvårdnadsrelevant information.
+VIKTIGT:
+- Du får INTE ställa diagnoser
+- Säg alltid "Detta ser ut som..." eller "Det kan likna..."
+- Rekommendera alltid att läkare bedömer
+- Fokusera på vad sjuksköterskan bör observera och dokumentera`;
+  }
+
+  // Build user message - with or without image
+  type MessageContent = string | Array<{ type: string; text?: string; image_url?: { url: string } }>;
+
+  let userContent: MessageContent = message;
+  if (imageBase64) {
+    userContent = [
+      { type: "text", text: message || "Vad ser du på denna bild? Ge omvårdnadsrelevant information." },
+      { type: "image_url", image_url: { url: imageBase64 } },
+    ];
+  }
+
+  // Use gpt-4o for images (has vision), gpt-4o-mini for text only
+  const model = imageBase64 ? "gpt-4o" : "gpt-4o-mini";
+
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -232,12 +258,13 @@ export async function POST(request: Request) {
       Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: "gpt-4o-mini",
+      model,
       temperature: 0.7,
+      max_tokens: imageBase64 ? 1500 : 1000,
       messages: [
         { role: "system", content: systemPrompt },
         ...conversationMessages,
-        { role: "user", content: message },
+        { role: "user", content: userContent },
       ],
     }),
   });

@@ -7,6 +7,7 @@ import { useLanguage } from "../../../lib/LanguageContext";
 type Message = {
   role: "user" | "boris";
   content: string;
+  image?: string; // Base64 image for display
 };
 
 type Shift = "day" | "evening" | "night" | null;
@@ -17,26 +18,70 @@ export default function BorisJobbPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(false);
   const [shift, setShift] = useState<Shift>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  function handleImageSelect(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    // Check file size (max 4MB)
+    if (file.size > 4 * 1024 * 1024) {
+      alert("Bilden är för stor. Max 4MB.");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const base64 = reader.result as string;
+      setSelectedImage(base64);
+      setImagePreview(base64);
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function clearImage() {
+    setSelectedImage(null);
+    setImagePreview(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  }
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!input.trim() || loading) return;
+    if ((!input.trim() && !selectedImage) || loading) return;
 
     const userMessage = input.trim();
+    const imageToSend = selectedImage;
+
     setInput("");
-    setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
+    clearImage();
+
+    setMessages((prev) => [...prev, {
+      role: "user",
+      content: userMessage || "📷 Bild skickad",
+      image: imageToSend || undefined
+    }]);
     setLoading(true);
 
     try {
       const response = await fetch("/api/boris", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: userMessage, mode: "work", history: messages, shift }),
+        body: JSON.stringify({
+          message: userMessage,
+          mode: "work",
+          history: messages,
+          shift,
+          image: imageToSend
+        }),
       });
       const data = await response.json();
       if (!response.ok) {
@@ -151,6 +196,13 @@ export default function BorisJobbPage() {
                     : "bg-white text-neutral-700 shadow-sm border border-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:border-neutral-700"
                 }`}
               >
+                {msg.image && (
+                  <img
+                    src={msg.image}
+                    alt="Uppladdad bild"
+                    className="max-w-full max-h-48 rounded-lg mb-2"
+                  />
+                )}
                 {msg.role === "boris" ? (
                   <div className="prose prose-sm prose-neutral dark:prose-invert max-w-none prose-p:my-2 prose-ul:my-2 prose-ol:my-2 prose-li:my-0.5 prose-headings:mt-3 prose-headings:mb-2 prose-a:text-blue-600 dark:prose-a:text-blue-400">
                     <ReactMarkdown>{msg.content}</ReactMarkdown>
@@ -173,27 +225,72 @@ export default function BorisJobbPage() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
-        <textarea
-          value={input}
-          onChange={(event) => setInput(event.target.value)}
-          required
-          rows={2}
-          placeholder={t.boris.placeholder}
-          className="flex-1 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 shadow-sm placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus:ring-1 focus:ring-neutral-400 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder:text-neutral-500"
-          onKeyDown={(event) => {
-            if (event.key === "Enter" && !event.shiftKey) {
-              event.preventDefault();
-              event.currentTarget.form?.requestSubmit();
-            }
-          }}
-        />
+      {/* Image preview */}
+      {imagePreview && (
+        <div className="flex items-start gap-2 p-3 rounded-xl border border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-800/50">
+          <img
+            src={imagePreview}
+            alt="Förhandsvisning"
+            className="max-h-24 rounded-lg"
+          />
+          <div className="flex-1">
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">Bild vald</p>
+            <button
+              type="button"
+              onClick={clearImage}
+              className="text-sm text-red-600 hover:text-red-700 dark:text-red-400"
+            >
+              Ta bort
+            </button>
+          </div>
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <div className="flex gap-2">
+          {/* Image upload button */}
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageSelect}
+            ref={fileInputRef}
+            className="hidden"
+            id="image-upload"
+          />
+          <label
+            htmlFor="image-upload"
+            className="flex items-center justify-center w-12 h-12 rounded-xl border border-neutral-200 bg-white text-neutral-500 cursor-pointer transition hover:border-neutral-300 hover:text-neutral-700 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:border-neutral-600 dark:hover:text-neutral-200 shrink-0"
+            title="Ladda upp bild"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+              <circle cx="9" cy="9" r="2"/>
+              <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+            </svg>
+          </label>
+
+          {/* Text input */}
+          <textarea
+            value={input}
+            onChange={(event) => setInput(event.target.value)}
+            rows={2}
+            placeholder={selectedImage ? "Beskriv vad du vill veta om bilden..." : t.boris.placeholder}
+            className="flex-1 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-neutral-900 shadow-sm placeholder:text-neutral-400 focus:border-neutral-400 focus:outline-none focus:ring-1 focus:ring-neutral-400 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 dark:placeholder:text-neutral-500"
+            onKeyDown={(event) => {
+              if (event.key === "Enter" && !event.shiftKey) {
+                event.preventDefault();
+                event.currentTarget.form?.requestSubmit();
+              }
+            }}
+          />
+        </div>
+
         <button
           type="submit"
-          disabled={loading || !input.trim()}
-          className="rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-50 sm:self-end dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200"
+          disabled={loading || (!input.trim() && !selectedImage)}
+          className="rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200 sm:self-end"
         >
-          {t.boris.askBoris}
+          {selectedImage ? "📷 Skicka med bild" : t.boris.askBoris}
         </button>
       </form>
     </div>
