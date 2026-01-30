@@ -229,12 +229,21 @@ export async function POST(request: Request) {
   // Add image analysis context if image is provided
   if (imageBase64) {
     systemPrompt += `\n\n## BILDANALYS
-Du har fått en bild att analysera. Beskriv vad du ser och ge omvårdnadsrelevant information.
-VIKTIGT:
-- Du får INTE ställa diagnoser
-- Säg alltid "Detta ser ut som..." eller "Det kan likna..."
-- Rekommendera alltid att läkare bedömer
-- Fokusera på vad sjuksköterskan bör observera och dokumentera`;
+Du har fått en bild. Hjälp till som den erfarna kollegan du är!
+
+Gör så här:
+1. **Beskriv konkret** vad du ser (färg, storlek, form, lokalisation)
+2. **Dela din erfarenhet** - "Detta liknar...", "Jag har sett liknande vid..."
+3. **Ge praktiska tips** - vad bör man observera, dokumentera, göra
+4. **Utbildning** - förklara vad det kan vara och varför det ser ut så
+
+Du FÅR:
+- Säga vad det liknar/kan vara
+- Ge omvårdnadsråd
+- Förklara fysiologi/patofysiologi
+- Dela kliniska erfarenheter
+
+Avsluta med en kort påminnelse om att stämma av med läkare vid osäkerhet, men var inte överförsiktig - du är här för att hjälpa!`;
   }
 
   // Build user message - with or without image
