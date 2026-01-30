@@ -60,6 +60,9 @@ export const translations = {
       asking: "Asking...",
       askBoris: "Ask Boris",
       borisReplies: "Boris replies:",
+      clearChat: "Clear chat",
+      you: "You",
+      thinking: "Thinking...",
     },
 
     // Knowledge page
@@ -145,6 +148,9 @@ export const translations = {
       asking: "Frågar...",
       askBoris: "Fråga Boris",
       borisReplies: "Boris svarar:",
+      clearChat: "Rensa chatt",
+      you: "Du",
+      thinking: "Tänker...",
     },
 
     // Knowledge page
