@@ -77,6 +77,11 @@ export const translations = {
     notes: {
       title: "Notes",
       placeholder: "Personal notes will live here. No persistence yet.",
+      addNote: "Add note",
+      newNotePlaceholder: "Write a note...",
+      noNotes: "No notes yet. Add your first note above.",
+      delete: "Delete",
+      saved: "Saved locally",
     },
 
     // Login page
@@ -165,6 +170,11 @@ export const translations = {
     notes: {
       title: "Anteckningar",
       placeholder: "Personliga anteckningar kommer finnas här. Ingen lagring ännu.",
+      addNote: "Lägg till",
+      newNotePlaceholder: "Skriv en anteckning...",
+      noNotes: "Inga anteckningar än. Lägg till din första ovan.",
+      delete: "Ta bort",
+      saved: "Sparad lokalt",
     },
 
     // Login page
