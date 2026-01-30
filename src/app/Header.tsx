@@ -2,10 +2,12 @@
 
 import { useLanguage } from "../lib/LanguageContext";
 import { useTheme } from "../lib/ThemeContext";
+import { useAuth } from "../lib/AuthContext";
 
 export function Header() {
   const { language, setLanguage, t } = useLanguage();
   const { theme, toggleTheme } = useTheme();
+  const { user } = useAuth();
 
   return (
     <header className="mb-8 flex flex-col gap-4">
@@ -46,6 +48,31 @@ export function Header() {
               {t.nav.boris}
             </a>
           </nav>
+          <a
+            href="/profil"
+            className={`rounded-full border p-2 shadow-sm transition ${
+              user
+                ? "border-green-300 bg-green-50 text-green-600 hover:border-green-400 dark:border-green-800 dark:bg-green-900/30 dark:text-green-400"
+                : "border-neutral-200 bg-white text-neutral-500 hover:border-neutral-300 hover:text-neutral-700 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:border-neutral-600 dark:hover:text-neutral-200"
+            }`}
+            aria-label={user ? user.name : "Logga in"}
+            title={user ? user.name : "Logga in"}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M20 21a8 8 0 1 0-16 0" />
+            </svg>
+          </a>
           <a
             href="/search"
             className="rounded-full border border-neutral-200 bg-white p-2 text-neutral-500 shadow-sm transition hover:border-neutral-300 hover:text-neutral-700 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:border-neutral-600 dark:hover:text-neutral-200"

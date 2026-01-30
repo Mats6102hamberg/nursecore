@@ -55,6 +55,14 @@ Du är varm, stöttande och engagerande - aldrig torr eller byråkratisk.
 | **Symtom-checker** | `/symtom` | Differentialdiagnostik, red flags, omvårdnadsåtgärder |
 | **FAQ** | Startsidan | 6 expanderbara frågor om hur man använder appen |
 
+### Infrastruktur
+
+| Funktion | Beskrivning |
+|----------|-------------|
+| **Inloggning/Konto** | localStorage-baserat auth-system med PIN-kod |
+| **PWA/Offline** | next-pwa konfigurerat, manifest.json, service worker |
+| **Profil-sida** | `/profil` - skapa konto, logga in, se statistik |
+
 ### Övriga Uppdateringar
 
 - **Dark mode** på alla nya komponenter och startsidans kort
@@ -179,9 +187,9 @@ b80fd7d style: add smoother phrasing to Boris responses
 ## Kända begränsningar
 
 - Boris ger aldrig doseringsråd eller behandlingsbeslut
-- Ingen persistent lagring (anteckningar i localStorage)
-- Ingen användarautentisering än
-- Boris-historik försvinner vid sidladdning
+- Data sparas i localStorage (inte molnet) - försvinner vid rensning av webbläsardata
+- PWA-ikoner kan behöva förbättras för bättre utseende
+- Boris-historik sparas per konto (max 20 meddelanden)
 
 ---
 
