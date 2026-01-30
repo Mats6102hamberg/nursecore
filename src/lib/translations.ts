@@ -76,9 +76,10 @@ export const translations = {
     // Knowledge page
     knowledge: {
       title: "Knowledge Base",
-      ibdOverview: "Placeholder: IBD overview",
-      liverNotes: "Placeholder: Liver ward quick notes",
-      icuChecklist: "Placeholder: ICU study checklist",
+      subtitle: "Quick reference for clinical practice and study.",
+      ibd: "IBD",
+      liver: "Liver",
+      icu: "ICU",
     },
 
     // Notes page
@@ -177,9 +178,10 @@ export const translations = {
     // Knowledge page
     knowledge: {
       title: "Kunskapsbank",
-      ibdOverview: "Platshållare: IBD-översikt",
-      liverNotes: "Platshållare: Leveravdelning snabbanteckningar",
-      icuChecklist: "Platshållare: IVA-studiechecklist",
+      subtitle: "Snabbreferenser för klinisk praktik och studier.",
+      ibd: "IBD",
+      liver: "Lever",
+      icu: "IVA",
     },
 
     // Notes page
