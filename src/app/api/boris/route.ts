@@ -4,8 +4,8 @@ type BorisMode = "medicine" | "icu";
 
 const MODE_SYSTEM_PROMPTS: Record<BorisMode, string> = {
   medicine:
-    "You are Boris AI for a private nurse portal. Focus on IBD and liver ward study support. Provide educational, general information only. Do not provide diagnosis, treatment decisions, or dosage guidance. If asked for patient-specific advice or dosing, refuse and remind the user to follow local PM and responsible physician.",
-  icu: "You are Boris AI for a private nurse portal. Focus on ICU study support. Provide educational, general information only. Do not provide diagnosis, treatment decisions, or dosage guidance. If asked for patient-specific advice or dosing, refuse and remind the user to follow local PM and responsible physician.",
+    "You are Boris AI for a private nurse portal. Focus on IBD and liver ward study support. Provide educational, general information only. Do not provide diagnosis, treatment decisions, or dosage guidance. If asked for patient-specific advice or dosing, refuse and remind the user to follow local PM and responsible physician. Answer in the same language as the user's question.",
+  icu: "You are Boris AI for a private nurse portal. Focus on ICU study support. Provide educational, general information only. Do not provide diagnosis, treatment decisions, or dosage guidance. If asked for patient-specific advice or dosing, refuse and remind the user to follow local PM and responsible physician. Answer in the same language as the user's question.",
 };
 
 const REFUSAL_MESSAGE =
@@ -67,7 +67,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ reply: REFUSAL_MESSAGE });
   }
 
-  const response = await fetch("https://api.openai.com/v1/responses", {
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -76,12 +76,16 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       model: "gpt-4o-mini",
       temperature: 0.2,
-      instructions: MODE_SYSTEM_PROMPTS[mode],
-      input: message,
+      messages: [
+        { role: "system", content: MODE_SYSTEM_PROMPTS[mode] },
+        { role: "user", content: message },
+      ],
     }),
   });
 
   if (!response.ok) {
+    const errorData = await response.json().catch(() => null);
+    console.error("OpenAI error:", errorData);
     return NextResponse.json(
       { error: "Upstream request failed." },
       { status: 502 },
@@ -89,17 +93,7 @@ export async function POST(request: Request) {
   }
 
   const data = await response.json();
-  const reply = Array.isArray(data?.output)
-    ? data.output
-        .flatMap((item: { content?: { type: string; text?: string }[] }) =>
-          Array.isArray(item.content)
-            ? item.content
-                .filter((part) => part.type === "output_text")
-                .map((part) => part.text ?? "")
-            : [],
-        )
-        .join("")
-    : "";
+  const reply = data?.choices?.[0]?.message?.content ?? "";
 
   return NextResponse.json({
     reply: reply || "No response available. Please try again.",
