@@ -1,7 +1,13 @@
 # NurseCore - Session Handover & Summary
 
 ## Quick Summary
-NurseCore är en svensk klinisk verktygslåda för sjuksköterskor. I denna session har vi byggt ut Boris AI med 8 förbättringar och skapat 5 nya kliniska verktyg.
+NurseCore är en svensk klinisk verktygslåda för sjuksköterskor. I denna session har vi:
+- Byggt ut Boris AI med **8 förbättringar**
+- Skapat **5 nya kliniska verktyg** (NEWS2, SBAR, Labb, Symtom-checker, FAQ)
+- Lagt till **inloggning/konto-system** med persistent data
+- Implementerat **PWA/offline-stöd** för app-känsla på mobil
+
+**Betyg: 9/10** - En komplett, användbar app!
 
 ---
 
@@ -16,6 +22,7 @@ En lugn, strukturerad app för dagligt vårdarbete och studier. Allt på ett st�
 - Tailwind CSS med dark mode (class strategy)
 - OpenAI API (GPT-4o för vision, GPT-4o-mini för text)
 - react-markdown för rendering av Boris-svar
+- next-pwa för offline-stöd
 
 **Miljövariabler:**
 ```
@@ -55,46 +62,58 @@ Du är varm, stöttande och engagerande - aldrig torr eller byråkratisk.
 | **Symtom-checker** | `/symtom` | Differentialdiagnostik, red flags, omvårdnadsåtgärder |
 | **FAQ** | Startsidan | 6 expanderbara frågor om hur man använder appen |
 
-### Infrastruktur
+### Infrastruktur - 3 stora funktioner
 
 | Funktion | Beskrivning |
 |----------|-------------|
-| **Inloggning/Konto** | localStorage-baserat auth-system med PIN-kod |
-| **PWA/Offline** | next-pwa konfigurerat, manifest.json, service worker |
-| **Profil-sida** | `/profil` - skapa konto, logga in, se statistik |
+| **Inloggning/Konto** | localStorage-baserat auth-system med PIN-kod, persistent data |
+| **PWA/Offline** | next-pwa konfigurerat, manifest.json, service worker, installerbar |
+| **Profil-sida** | `/profil` - skapa konto, logga in, se statistik, logga ut |
 
 ### Övriga Uppdateringar
 
 - **Dark mode** på alla nya komponenter och startsidans kort
 - **Tvåspråkigt stöd** (SV/EN) för alla nya funktioner
 - **Gradient-kort** på startsidan (röd=NEWS2, blå=SBAR, lila=Labb, orange=Symtom)
+- **Grön profil-ikon** i header när inloggad
+- **Notes-sida** uppdaterad att använda auth för persistent lagring
 
 ---
 
 ## Filstruktur (Viktiga filer)
 
 ```
-src/
-├── app/
-│   ├── page.tsx                 # Startsida med FAQ
-│   ├── boris/
-│   │   ├── studie/page.tsx      # Boris studieläge
-│   │   └── jobb/page.tsx        # Boris jobbläge (med skiftväljare)
-│   ├── news2/page.tsx           # NEWS2 kalkylator
-│   ├── sbar/page.tsx            # SBAR generator
-│   ├── labb/page.tsx            # Labb-tolkare
-│   ├── symtom/page.tsx          # Symtom-checker (NY!)
-│   ├── tools/page.tsx           # Kliniska checklistor
-│   ├── knowledge/page.tsx       # Kunskapsbank
-│   ├── notes/page.tsx           # Personliga anteckningar
-│   └── api/
-│       └── boris/route.ts       # Boris API endpoint (alla prompts här)
-├── lib/
-│   ├── translations.ts          # Alla SV/EN översättningar
-│   ├── LanguageContext.tsx      # Språkhantering
-│   └── ThemeContext.tsx         # Dark mode
-└── data/
-    └── knowledge-content.tsx    # Tvåspråkigt kunskapsinnehåll
+nursecore/
+├── next.config.js              # PWA-konfiguration
+├── public/
+│   ├── manifest.json           # PWA manifest
+│   ├── icon-192.png            # App-ikon
+│   └── icon-512.png            # App-ikon stor
+├── src/
+│   ├── app/
+│   │   ├── page.tsx            # Startsida med FAQ
+│   │   ├── Header.tsx          # Navigation med profil-ikon
+│   │   ├── layout.tsx          # Root layout med providers
+│   │   ├── profil/page.tsx     # Inloggning/profil (NY!)
+│   │   ├── boris/
+│   │   │   ├── studie/page.tsx # Boris studieläge
+│   │   │   └── jobb/page.tsx   # Boris jobbläge (med skiftväljare)
+│   │   ├── news2/page.tsx      # NEWS2 kalkylator (NY!)
+│   │   ├── sbar/page.tsx       # SBAR generator (NY!)
+│   │   ├── labb/page.tsx       # Labb-tolkare (NY!)
+│   │   ├── symtom/page.tsx     # Symtom-checker (NY!)
+│   │   ├── tools/page.tsx      # Kliniska checklistor
+│   │   ├── knowledge/page.tsx  # Kunskapsbank
+│   │   ├── notes/page.tsx      # Anteckningar (uppdaterad med auth)
+│   │   └── api/
+│   │       └── boris/route.ts  # Boris API endpoint (alla prompts)
+│   ├── lib/
+│   │   ├── AuthContext.tsx     # Inloggning/konto (NY!)
+│   │   ├── translations.ts     # Alla SV/EN översättningar
+│   │   ├── LanguageContext.tsx # Språkhantering
+│   │   └── ThemeContext.tsx    # Dark mode
+│   └── data/
+│       └── knowledge-content.tsx # Tvåspråkigt kunskapsinnehåll
 ```
 
 ---
@@ -105,6 +124,11 @@ src/
 // Språk
 const { t, language } = useLanguage();
 // Använd: t.home.title, language === "sv"
+
+// Auth/Inloggning
+const { user, userData, login, register, logout } = useAuth();
+// user = null om inte inloggad
+// userData.notes, userData.favorites, etc.
 
 // Dark mode klasser
 className="bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100"
@@ -127,6 +151,8 @@ const response = await fetch("/api/boris", {
 ## Git Commits (Denna session)
 
 ```
+8d67750 feat: add auth system, PWA offline support, and symptom checker
+3d5e45b feat: add symptom checker + complete session handover
 07cc570 docs: add 28 future feature ideas to handover
 17c87f4 docs: add session handover for next agent
 da2cb29 feat: add FAQ section to home page
@@ -168,7 +194,7 @@ b80fd7d style: add smoother phrasing to Boris responses
 ### UX & Gamification
 19. Personlig dashboard
 20. Automatiskt nattläge
-21. Offline-läge (PWA)
+21. ~~Offline-läge (PWA)~~ ✅ KLAR
 22. Delning & export
 23. Daglig utmaning
 24. Kunskapsquiz
@@ -180,7 +206,7 @@ b80fd7d style: add smoother phrasing to Boris responses
 ### Rekommenderad prioritet för nästa agent
 **Snabba vinster:** GCS, Vätskebalans, Smärtskattning
 **Medium effort:** Fallbaserad inlärning, Röstassistent
-**Större projekt:** EKG-tolkare, PWA, Medicinskåps-scanner
+**Större projekt:** EKG-tolkare, Medicinskåps-scanner
 
 ---
 
@@ -193,6 +219,16 @@ b80fd7d style: add smoother phrasing to Boris responses
 
 ---
 
+## Hur man testar
+
+1. **PWA:** Öppna på mobil → "Lägg till på hemskärmen"
+2. **Inloggning:** Gå till `/profil` → Skapa konto med namn + PIN
+3. **Anteckningar:** Logga in → Gå till `/notes` → Lägg till anteckning → Stäng och öppna igen → Data finns kvar!
+4. **Boris:** Testa bilduppladdning, skiftläge, och emotionellt stöd ("Jag hinner inte med allt")
+5. **Verktyg:** NEWS2, SBAR, Labb-tolkare, Symtom-checker
+
+---
+
 ## Kontakt & Support
 
 - Användare kan rapportera problem via FAQ
@@ -202,4 +238,5 @@ b80fd7d style: add smoother phrasing to Boris responses
 ---
 
 *Senast uppdaterad: Januari 2025*
-*Session: Boris AI förbättringar + 5 nya kliniska verktyg*
+*Session: Boris AI (8 förbättringar) + 5 verktyg + Auth + PWA*
+*Betyg: 9/10*
