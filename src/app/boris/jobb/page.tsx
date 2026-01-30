@@ -8,13 +8,6 @@ type Message = {
   content: string;
 };
 
-const QUICK_QUESTIONS = [
-  "Patienten försämras – ABCDE?",
-  "Hur skriver jag SBAR snabbt?",
-  "Anhöriga är missnöjda, tips?",
-  "Jag hinner inte med allt",
-  "När ska jag eskalera?",
-];
 
 export default function BorisJobbPage() {
   const { t } = useLanguage();
@@ -92,10 +85,10 @@ export default function BorisJobbPage() {
       {messages.length === 0 && (
         <div className="flex flex-col gap-3">
           <p className="text-sm text-neutral-500 dark:text-neutral-400">
-            Snabba frågor:
+            {t.boris.quickQuestionsWork}
           </p>
           <div className="flex flex-wrap gap-2">
-            {QUICK_QUESTIONS.map((question) => (
+            {[t.boris.qWork1, t.boris.qWork2, t.boris.qWork3, t.boris.qWork4, t.boris.qWork5].map((question) => (
               <button
                 key={question}
                 type="button"

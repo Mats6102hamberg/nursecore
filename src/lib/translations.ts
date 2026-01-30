@@ -76,6 +76,24 @@ export const translations = {
       clearChat: "Clear chat",
       you: "You",
       thinking: "Thinking...",
+      quickSuggestions: "Suggestions to start with:",
+      quickQuestionsWork: "Quick questions:",
+      // Quick questions - Medicine
+      qMed1: "Explain IBD flare as if I'm new",
+      qMed2: "What to watch for in hepatic encephalopathy?",
+      qMed3: "Give me a checklist for ascites tap",
+      qMed4: "Which lab values are most important in IBD?",
+      // Quick questions - ICU
+      qIcu1: "ABCDE checklist quick",
+      qIcu2: "What does high CVP mean?",
+      qIcu3: "Common ventilator alarms and what to do",
+      qIcu4: "How do I know if the patient is septic?",
+      // Quick questions - Work
+      qWork1: "Patient deteriorating – ABCDE?",
+      qWork2: "How do I write SBAR quickly?",
+      qWork3: "Relatives are unhappy, tips?",
+      qWork4: "I can't keep up with everything",
+      qWork5: "When should I escalate?",
     },
 
     // Knowledge page
@@ -221,6 +239,24 @@ export const translations = {
       clearChat: "Rensa chatt",
       you: "Du",
       thinking: "Tänker...",
+      quickSuggestions: "Förslag att börja med:",
+      quickQuestionsWork: "Snabba frågor:",
+      // Quick questions - Medicine
+      qMed1: "Förklara IBD-skov som om jag är ny",
+      qMed2: "Vad ska jag tänka på vid leverencefalopati?",
+      qMed3: "Ge mig en checklista för ascitestappning",
+      qMed4: "Vilka labvärden är viktigast vid IBD?",
+      // Quick questions - ICU
+      qIcu1: "ABCDE-checklista snabbt",
+      qIcu2: "Vad betyder högt CVP?",
+      qIcu3: "Vanliga ventilatoralarmer och vad jag gör",
+      qIcu4: "Hur vet jag om patienten är i sepsis?",
+      // Quick questions - Work
+      qWork1: "Patienten försämras – ABCDE?",
+      qWork2: "Hur skriver jag SBAR snabbt?",
+      qWork3: "Anhöriga är missnöjda, tips?",
+      qWork4: "Jag hinner inte med allt",
+      qWork5: "När ska jag eskalera?",
     },
 
     // Knowledge page

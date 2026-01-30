@@ -10,20 +10,6 @@ type Message = {
   content: string;
 };
 
-const QUICK_QUESTIONS: Record<Mode, string[]> = {
-  medicine: [
-    "Förklara IBD-skov som om jag är ny",
-    "Vad ska jag tänka på vid leverencefalopati?",
-    "Ge mig en checklista för ascitestappning",
-    "Vilka labvärden är viktigast vid IBD?",
-  ],
-  icu: [
-    "ABCDE-checklista snabbt",
-    "Vad betyder högt CVP?",
-    "Vanliga ventilatoralarmer och vad jag gör",
-    "Hur vet jag om patienten är i sepsis?",
-  ],
-};
 
 export default function BorisStudiePage() {
   const { t } = useLanguage();
@@ -144,10 +130,13 @@ export default function BorisStudiePage() {
       {messages.length === 0 && (
         <div className="flex flex-col gap-3">
           <p className="text-sm text-neutral-500 dark:text-neutral-400">
-            Förslag att börja med:
+            {t.boris.quickSuggestions}
           </p>
           <div className="flex flex-wrap gap-2">
-            {QUICK_QUESTIONS[mode].map((question) => (
+            {(mode === "medicine"
+              ? [t.boris.qMed1, t.boris.qMed2, t.boris.qMed3, t.boris.qMed4]
+              : [t.boris.qIcu1, t.boris.qIcu2, t.boris.qIcu3, t.boris.qIcu4]
+            ).map((question) => (
               <button
                 key={question}
                 type="button"
