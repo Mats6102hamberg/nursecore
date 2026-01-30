@@ -35,6 +35,16 @@ export const translations = {
       knowledgeDesc: "Short references for IBD, liver, and ICU study.",
       knowledgeLink: "Browse knowledge →",
       borisCta: "Boris – here for you",
+      // New tools
+      news2Title: "NEWS2",
+      news2Desc: "Calculate early warning scores for patient deterioration.",
+      news2Link: "Calculate NEWS2 →",
+      sbarTitle: "SBAR Generator",
+      sbarDesc: "Create structured reports for safe handover communication.",
+      sbarLink: "Create SBAR →",
+      labbTitle: "Lab Interpreter",
+      labbDesc: "Enter lab values and get Boris to explain them.",
+      labbLink: "Interpret labs →",
     },
 
     // Tools page
@@ -205,6 +215,16 @@ export const translations = {
       knowledgeDesc: "Korta referenser för IBD, lever och IVA-studier.",
       knowledgeLink: "Utforska kunskap →",
       borisCta: "Boris – finns här för dig",
+      // New tools
+      news2Title: "NEWS2",
+      news2Desc: "Beräkna early warning score för tidig upptäckt av försämring.",
+      news2Link: "Beräkna NEWS2 →",
+      sbarTitle: "SBAR Generator",
+      sbarDesc: "Skapa strukturerade rapporter för säker kommunikation.",
+      sbarLink: "Skapa SBAR →",
+      labbTitle: "Labb-tolkare",
+      labbDesc: "Mata in labbvärden och låt Boris förklara dem.",
+      labbLink: "Tolka labbvärden →",
     },
 
     // Tools page

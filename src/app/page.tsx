@@ -8,14 +8,14 @@ export default function HomePage() {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5 py-8 sm:py-12">
       <header className="flex flex-col gap-4">
-        <div className="inline-flex w-fit items-center rounded-full border border-neutral-200 bg-white/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-neutral-500">
+        <div className="inline-flex w-fit items-center rounded-full border border-neutral-200 bg-white/70 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-neutral-500 dark:border-neutral-700 dark:bg-neutral-800/70 dark:text-neutral-400">
           {t.home.badge}
         </div>
         <div className="flex flex-col gap-3">
-          <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 sm:text-5xl">
+          <h1 className="text-4xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 sm:text-5xl">
             {t.home.title}
           </h1>
-          <p className="max-w-2xl text-base text-neutral-600 sm:text-lg">
+          <p className="max-w-2xl text-base text-neutral-600 dark:text-neutral-400 sm:text-lg">
             {t.home.description}
           </p>
         </div>
@@ -24,77 +24,137 @@ export default function HomePage() {
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <a
           href="/tools"
-          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800"
         >
           <div>
-            <h2 className="text-lg font-semibold text-neutral-900">
+            <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
               {t.home.toolsTitle}
             </h2>
-            <p className="mt-2 text-sm text-neutral-600">{t.home.toolsDesc}</p>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{t.home.toolsDesc}</p>
           </div>
-          <span className="text-sm font-medium text-neutral-900">
+          <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
             {t.home.toolsLink}
           </span>
         </a>
         <a
           href="/boris/studie"
-          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800"
         >
           <div>
-            <h2 className="text-lg font-semibold text-neutral-900">
+            <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
               {t.home.borisStudyTitle}
             </h2>
-            <p className="mt-2 text-sm text-neutral-600">
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
               {t.home.borisStudyDesc}
             </p>
           </div>
-          <span className="text-sm font-medium text-neutral-900">
+          <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
             {t.home.borisStudyLink}
           </span>
         </a>
         <a
           href="/boris/jobb"
-          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800"
         >
           <div>
-            <h2 className="text-lg font-semibold text-neutral-900">
+            <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
               {t.home.borisWorkTitle}
             </h2>
-            <p className="mt-2 text-sm text-neutral-600">
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
               {t.home.borisWorkDesc}
             </p>
           </div>
-          <span className="text-sm font-medium text-neutral-900">
+          <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
             {t.home.borisWorkLink}
           </span>
         </a>
+
+        {/* New clinical tools section */}
         <a
-          href="/notes"
-          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          href="/news2"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-red-900/50 dark:from-red-950/30 dark:to-neutral-800"
         >
           <div>
-            <h2 className="text-lg font-semibold text-neutral-900">
+            <div className="flex items-center gap-2">
+              <span className="text-xl">🚨</span>
+              <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+                {t.home.news2Title}
+              </h2>
+            </div>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+              {t.home.news2Desc}
+            </p>
+          </div>
+          <span className="text-sm font-medium text-red-700 dark:text-red-400">
+            {t.home.news2Link}
+          </span>
+        </a>
+        <a
+          href="/sbar"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-blue-900/50 dark:from-blue-950/30 dark:to-neutral-800"
+        >
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-xl">📋</span>
+              <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+                {t.home.sbarTitle}
+              </h2>
+            </div>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+              {t.home.sbarDesc}
+            </p>
+          </div>
+          <span className="text-sm font-medium text-blue-700 dark:text-blue-400">
+            {t.home.sbarLink}
+          </span>
+        </a>
+        <a
+          href="/labb"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-purple-200 bg-gradient-to-br from-purple-50 to-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-purple-900/50 dark:from-purple-950/30 dark:to-neutral-800"
+        >
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-xl">🔬</span>
+              <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+                {t.home.labbTitle}
+              </h2>
+            </div>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+              {t.home.labbDesc}
+            </p>
+          </div>
+          <span className="text-sm font-medium text-purple-700 dark:text-purple-400">
+            {t.home.labbLink}
+          </span>
+        </a>
+
+        <a
+          href="/notes"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800"
+        >
+          <div>
+            <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
               {t.home.notesTitle}
             </h2>
-            <p className="mt-2 text-sm text-neutral-600">{t.home.notesDesc}</p>
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{t.home.notesDesc}</p>
           </div>
-          <span className="text-sm font-medium text-neutral-900">
+          <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
             {t.home.notesLink}
           </span>
         </a>
         <a
           href="/knowledge"
-          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+          className="group flex min-h-[140px] flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-neutral-700 dark:bg-neutral-800"
         >
           <div>
-            <h2 className="text-lg font-semibold text-neutral-900">
+            <h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
               {t.home.knowledgeTitle}
             </h2>
-            <p className="mt-2 text-sm text-neutral-600">
+            <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
               {t.home.knowledgeDesc}
             </p>
           </div>
-          <span className="text-sm font-medium text-neutral-900">
+          <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
             {t.home.knowledgeLink}
           </span>
         </a>
@@ -103,7 +163,7 @@ export default function HomePage() {
       <div className="fixed bottom-6 right-6 z-50">
         <a
           href="/boris/jobb"
-          className="inline-flex items-center rounded-full bg-neutral-900 px-5 py-3 text-sm font-semibold text-white shadow-lg"
+          className="inline-flex items-center rounded-full bg-neutral-900 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-neutral-800 dark:bg-neutral-100 dark:text-neutral-900 dark:hover:bg-neutral-200"
         >
           {t.home.borisCta}
         </a>
