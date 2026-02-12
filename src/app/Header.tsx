@@ -10,40 +10,40 @@ export function Header() {
   const { user } = useAuth();
 
   return (
-    <header className="mb-8 flex flex-col gap-4">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <a href="/" className="text-lg font-semibold tracking-tight">
+    <header className="sticky top-0 z-40 -mx-5 mb-8 flex flex-col gap-4 overflow-hidden border-b border-neutral-200/50 bg-white/70 px-5 py-4 backdrop-blur-xl dark:border-neutral-700/50 dark:bg-neutral-900/70 sm:-mx-6 sm:px-6">
+      <div className="flex items-center justify-between gap-3">
+        <a href="/" className="shrink-0 text-lg font-bold tracking-tight bg-gradient-to-r from-neutral-900 via-neutral-600 to-neutral-900 bg-clip-text text-transparent dark:from-neutral-100 dark:via-neutral-400 dark:to-neutral-100">
           NurseCore
         </a>
-        <div className="flex items-center gap-2">
-          <nav className="flex flex-wrap gap-1.5 text-sm">
+        <div className="flex items-center gap-2 overflow-hidden">
+          <nav className="flex gap-1.5 overflow-x-auto text-sm scrollbar-hide" style={{ WebkitOverflowScrolling: 'touch' }}>
             <a
               href="/"
-              className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
+              className="shrink-0 whitespace-nowrap rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
             >
               {t.nav.home}
             </a>
             <a
               href="/tools"
-              className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
+              className="shrink-0 whitespace-nowrap rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
             >
               {t.nav.tools}
             </a>
             <a
               href="/knowledge"
-              className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
+              className="shrink-0 whitespace-nowrap rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
             >
               {t.nav.knowledge}
             </a>
             <a
               href="/calculator"
-              className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
+              className="shrink-0 whitespace-nowrap rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
             >
               {t.nav.calculator}
             </a>
             <a
               href="/boris"
-              className="rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
+              className="shrink-0 whitespace-nowrap rounded-full border border-neutral-200 bg-white px-3 py-1.5 font-medium text-neutral-700 shadow-sm transition hover:border-neutral-300 hover:text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:border-neutral-600 dark:hover:text-neutral-100"
             >
               {t.nav.boris}
             </a>

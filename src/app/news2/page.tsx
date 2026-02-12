@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../../lib/LanguageContext";
 
 type Parameter = {
@@ -134,6 +134,38 @@ function getRiskLevel(score: number): { level: string; action: string; frequency
   };
 }
 
+function useAnimatedScore(target: number, enabled: boolean) {
+  const [display, setDisplay] = useState(0);
+  const prevTarget = useRef(0);
+
+  useEffect(() => {
+    if (!enabled) {
+      setDisplay(0);
+      prevTarget.current = 0;
+      return;
+    }
+    const from = prevTarget.current;
+    const to = target;
+    prevTarget.current = target;
+    if (from === to) { setDisplay(to); return; }
+
+    const steps = Math.abs(to - from);
+    const duration = Math.min(400, steps * 80);
+    const stepTime = duration / steps;
+    let current = from;
+
+    const timer = setInterval(() => {
+      current += to > from ? 1 : -1;
+      setDisplay(current);
+      if (current === to) clearInterval(timer);
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [target, enabled]);
+
+  return display;
+}
+
 export default function News2Page() {
   const { language } = useLanguage();
   const [values, setValues] = useState<Record<string, number | null>>({});
@@ -141,6 +173,7 @@ export default function News2Page() {
   const totalScore = Object.values(values).reduce((sum: number, val) => sum + (val ?? 0), 0);
   const hasAllValues = PARAMETERS.every(p => values[p.id] !== undefined && values[p.id] !== null);
   const hasAnyThree = Object.values(values).some(v => v === 3);
+  const animatedScore = useAnimatedScore(totalScore, hasAllValues);
 
   const risk = hasAllValues ? getRiskLevel(hasAnyThree && totalScore < 5 ? 5 : totalScore) : null;
 
@@ -164,8 +197,8 @@ export default function News2Page() {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-sm text-neutral-500 dark:text-neutral-400">Total poäng</p>
-            <p className={`text-5xl font-bold ${hasAllValues ? getScoreColorClass(totalScore) : 'text-neutral-300 dark:text-neutral-600'}`}>
-              {hasAllValues ? totalScore : '–'}
+            <p className={`text-5xl font-bold tabular-nums transition-colors duration-300 ${hasAllValues ? getScoreColorClass(totalScore) : 'text-neutral-300 dark:text-neutral-600'}`}>
+              {hasAllValues ? animatedScore : '–'}
             </p>
           </div>
           {hasAllValues && risk && (

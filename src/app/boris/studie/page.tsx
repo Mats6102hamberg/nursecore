@@ -232,8 +232,10 @@ export default function BorisStudiePage() {
           {loading && (
             <div className="flex flex-col gap-1 items-start">
               <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">Boris</span>
-              <div className="bg-white text-neutral-700 shadow-sm border border-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:border-neutral-700 rounded-2xl px-4 py-3 text-sm">
-                {t.boris.thinking}
+              <div className="bg-white text-neutral-700 shadow-sm border border-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:border-neutral-700 rounded-2xl px-4 py-3 text-sm flex items-center gap-1.5">
+                <span className="typing-dot inline-block h-2 w-2 rounded-full bg-neutral-400 dark:bg-neutral-500" />
+                <span className="typing-dot inline-block h-2 w-2 rounded-full bg-neutral-400 dark:bg-neutral-500" />
+                <span className="typing-dot inline-block h-2 w-2 rounded-full bg-neutral-400 dark:bg-neutral-500" />
               </div>
             </div>
           )}
