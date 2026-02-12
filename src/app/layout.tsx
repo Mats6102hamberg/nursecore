@@ -4,11 +4,14 @@ import { ThemeProvider } from "../lib/ThemeContext";
 import { AuthProvider } from "../lib/AuthContext";
 import { Header } from "./Header";
 
+export const viewport = {
+  themeColor: "#171717",
+};
+
 export const metadata = {
   title: "NurseCore",
   description: "Klinisk verktygslåda för sjuksköterskor",
   manifest: "/manifest.json",
-  themeColor: "#171717",
   icons: {
     icon: [
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
