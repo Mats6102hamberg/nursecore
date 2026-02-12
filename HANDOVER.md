@@ -29,10 +29,14 @@ OPENAI_API_KEY=sk-...       # Kravs for Boris AI
 PGHOST_UNPOOLED=...         # Neon Postgres (ansluten men oanvand)
 ```
 
-**Deploy:**
-- **Live:** https://nursecore.vercel.app
-- **GitHub:** https://github.com/Mats6102hamberg/nursecore
-- **Lokal mapp:** `/Users/matshamberg/CascadeProjects/nursecore`
+**Lankar:**
+
+| Vad | Lank |
+|-----|------|
+| Live-sida | [nursecore.vercel.app](https://nursecore.vercel.app) |
+| Vercel Dashboard | [vercel.com/mats-hambergs-projects/nursecore](https://vercel.com/mats-hambergs-projects/nursecore) |
+| GitHub Repo | [github.com/Mats6102hamberg/nursecore](https://github.com/Mats6102hamberg/nursecore) |
+| Lokal mapp | [/Users/matshamberg/CascadeProjects/nursecore](/Users/matshamberg/CascadeProjects/nursecore) |
 
 ---
 

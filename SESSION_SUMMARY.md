@@ -84,13 +84,15 @@ Projektet undersöktes grundligt:
 
 ---
 
-## Deploy-info
+## Lankar & Deploy
 
-- **Live URL:** https://nursecore.vercel.app
-- **GitHub:** https://github.com/Mats6102hamberg/nursecore
-- **Branch:** main
-- **Vercel:** Auto-deploy vid push till main
-- **Lokal mapp:** `/Users/matshamberg/CascadeProjects/nursecore`
+| Vad | Lank |
+|-----|------|
+| Live-sida | [nursecore.vercel.app](https://nursecore.vercel.app) |
+| Vercel Dashboard | [vercel.com/mats-hambergs-projects/nursecore](https://vercel.com/mats-hambergs-projects/nursecore) |
+| GitHub Repo | [github.com/Mats6102hamberg/nursecore](https://github.com/Mats6102hamberg/nursecore) |
+| Lokal mapp | [/Users/matshamberg/CascadeProjects/nursecore](/Users/matshamberg/CascadeProjects/nursecore) |
+| Branch | `main` (auto-deploy vid push) |
 
 ---
 
